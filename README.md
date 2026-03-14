@@ -2,7 +2,7 @@
 
 This is the source code for *notationref*, a comprehensive map of music notation features across formats and software. View it here:
 
-LINK
+https://w3c-cg.github.io/music-notationref/
 
 The goals of this project are:
 
@@ -30,15 +30,15 @@ The taxonomy is defined as a hierarchical JSON data structure in concepts.json. 
 
 Each "format" (such as MNX) is also defined as a JSON file. It's a simple object with these keys:
 
-* `"name"`: The format/software name
-* `"infoUrl"`: A URL for information about the format/software
-* `"support"`: A dictionary mapping concept ID strings to support information
+* `"name"`: The format/software name.
+* `"infoUrl"`: A URL for information about the format/software.
+* `"support"`: A dictionary mapping concept ID strings to support information.
 
 Support information is a dictionary with these keys:
 
 * `"level"`: A number specifying this format's support for the concept. `1` means supported; `2` means partially supported; `3` means unsupported.
 * `"text"`: Text that describes this format's support.
-* `"link"`: An optional URL with more information (e.g., a deep link to specific documentation)
+* `"link"`: An optional URL with more information (e.g., a deep link to specific documentation).
 
 Have a look at formats/mnx.json for a working example.
 
@@ -48,9 +48,9 @@ The design is deliberately decoupled, so that format JSON files do not need to l
 
 To document your own software/format, copy the file `formats/empty.json` from this repo and fill in the information for each notational concept.
 
-When you're done, publish that JSON file somewhere on the web. We plan to improve the tool to allow for importing arbitrary JSON URLs (coming soon), at which point you'll be able to load your software/format. (For the time being, feel free to hack a local copy of index.html to load your custom JSON file instead of mnx.json.) We also plan on hosting a simple list of publicly available format JSON files.
+When you're done, publish that JSON file somewhere on the web. We plan to improve the tool to allow for importing arbitrary JSON URLs (coming soon), at which point you'll be able to view your software/format in the web app. (For the time being, feel free to hack a local copy of index.html to load your custom JSON file instead of mnx.json.) We also plan to host a directory of publicly available format JSON files.
 
-Note: we encourage developers to create separate format files for different aspects of their software. Music notation applications are complex, and in practice it's possible for them to support some notations in _some_ cases but not in others.
+Note: we encourage developers to create separate format files for different aspects of their software. Music notation applications are complex, and in practice it's possible for them to support notations in _some_ cases but not in others.
 
 For example, here are the files Soundslice uses to document its feature support internally:
 
