@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>notationref: music notation support table</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* { font-family: verdana,helvetica,sans-serif; margin: 0; padding: 0; box-sizing: border-box; }
+body { display: flex; min-height: 100vh; }
+#sidebar { position: fixed; width: 200px; height: 100vh; flex-shrink: 0; padding: 20px; background: #cedede; overflow-y: auto; }
+#content { margin: 0 0 0 200px; flex: 1; padding: 20px; }
+#content-header { position: fixed; top: 0; left: 200px; right: 0; height: 40px; background: #ccc; padding: 10px; font-size: 14px; }
+h1 { font-size: 15px; margin: 0 0 20px; }
+#tagline { font-size: 13px; margin: 0 0 20px; }
+#sidebarnav { list-style: none; }
+#sidebarnav li { padding: 2px 5px; }
+#sidebarnav li.selected { background: #fff; }
+#sidebarnav button { background: none; border: 0; cursor: pointer; text-align: left; }
+
+td { border-bottom: 1px solid #ccc; padding: 5px; }
+#formatinfo { user-select: none; }
+h2 { font-size: 20px; margin: 40px 0 0; }
+tr.hidden { display: none; }
+tr.expandable { background: #ddd; cursor: pointer; user-select: none; }
+table { width: 100%; max-width: 800px; table-layout: fixed; font-size: 14px; }
+td.support0 { background: #fff; }
+td.support1 { background: #90ee90; }
+td.support2 { background: #ccc; }
+td.support3 { background: #ffb6c1; }
+</style>
+</head>
+<body>
+
+<nav id="sidebar">
+    <h1>notationref</h1>
+
+    <p id="tagline">A comprehensive map of music notation features across formats and software.</p>
+    <ul id="sidebarnav"></ul>
+</nav>
+
+<div id="content">
+    <div id="content-header">
+        <div id="formatinfo"></div>
+        <div style="display:none">Reset table: <button id="expandall">Expand all</button> <button id="collapseall">Collapse all</button></div>
+    </div>
+    <div id="maintable"></div>
+</div>
+
+<script>
+function makeSafe(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#x27;');
+}
+function getElementWithAttribute(el, name) {
+    var val;
+    while (el && el.getAttribute) {
+        val = el.getAttribute(name);
+        if (val) {
+            return el;
+        }
+        el = el.parentNode;
+    }
+    return null;
+}
+function gid(id) {
+    return document.getElementById(id);
+}
+function hasClass(el, name) {
+    return el.classList.contains(name);
+}
+function addClass(el, name) {
+    el.classList.add(name);
+}
+function removeClass(el, name) {
+    el.classList.remove(name);
+}
+function addRemoveClass(el, name, condition) {
+    if (condition) {
+        addClass(el, name);
+    }
+    else {
+        removeClass(el, name);
+    }
+}
+class SupportTable {
+    constructor(navEl, tableEl, formatsEl) {
+        this.navEl = navEl;
+        this.tableEl = tableEl;
+        this.formatsEl = formatsEl;
+        this.concepts = [];
+        this.formats = [];
+        this.currentTopLevelConcept = 0; // Index of CONCEPTS
+        this.selectedFormats = new Set();
+        this.nextID = 1;
+
+        navEl.addEventListener('click', (e) => {
+            var el = getElementWithAttribute(e.target, 'data-idx');
+            if (el !== null) {
+                this.setTopLevelConcept(parseInt(el.getAttribute('data-idx'), 10));
+            }
+        });
+        formatsEl.addEventListener('input', (e) => {
+            this.selectFormat(
+                parseInt(e.target.getAttribute('data-idx'), 10),
+                e.target.checked
+            );
+        });
+        tableEl.addEventListener('click', (e) => {
+            var rowEl = getElementWithAttribute(e.target, 'data-nest');
+            if (rowEl) {
+                this.toggleExpand(rowEl);
+            }
+        });
+        gid('expandall').addEventListener('click', () => {
+            this.expandAll();
+        });
+        gid('collapseall').addEventListener('click', () => {
+            this.collapseAll();
+        });
+
+        Promise.all([
+            this.fetchConcepts(),
+            this.fetchFormat('./formats/mnx.json').then(() => {
+                return this.fetchFormat('./formats/mnxconverter.json');
+            })
+        ]).then(() => {
+            this.redrawNav();
+            this.redrawFormatSelector();
+            this.redrawContent();
+            this.setTopLevelConcept(0);
+            this.selectFormat(0, true);
+        });
+    }
+    fetchConcepts() {
+        return fetch('./concepts.json')
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                this.concepts = data;
+            });
+    }
+    fetchFormat(url) {
+        return fetch(url)
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                this.formats.push(data);
+            });
+    }
+    setTopLevelConcept(idx) {
+        removeClass(gid(`conceptnav${this.currentTopLevelConcept}`), 'selected');
+        this.currentTopLevelConcept = idx;
+        addClass(gid(`conceptnav${this.currentTopLevelConcept}`), 'selected');
+        this.redrawContent();
+        window.scrollTo(0, 0);
+    }
+    selectFormat(idx, isOn) {
+        if (isOn) {
+            this.selectedFormats.add(idx);
+        }
+        else {
+            this.selectedFormats.delete(idx);
+        }
+        gid(`formatchk${idx}`).checked = isOn;
+        this.redrawContent();
+    }
+    redrawNav() {
+        var html = '',
+            i = 0,
+            len = this.concepts.length;
+        for (; i !== len; i++) {
+            html += `<li id="conceptnav${i}"><button data-idx="${i}">${makeSafe(this.concepts[i]['name'])}</button></li>`;
+        }
+        this.navEl.innerHTML = html;
+    }
+    redrawFormatSelector() {
+        var html = '',
+            i = 0,
+            len = this.formats.length;
+        for (; i !== len; i++) {
+            html += `<label><input type="checkbox" id="formatchk${i}" data-idx="${i}"> ${makeSafe(this.formats[i]['name'])}</label> `;
+        }
+        this.formatsEl.innerHTML = html;
+    }
+    redrawContent() {
+        this.tableEl.innerHTML = this.conceptHTML(this.concepts[this.currentTopLevelConcept], 0);
+        for (var i = 0, len = this.formats.length; i !== len; i++) {
+            if (this.selectedFormats.has(i)) {
+                this.addFormat(this.formats[i]);
+            }
+        }
+    }
+    conceptHTML(concept, nestLevel) {
+        var t = concept['type'];
+        if (t === 'group') {
+            return this.groupHTML(concept);
+        }
+        else if (t === 'subgroup') {
+            return this.subgroupHTML(concept, nestLevel + 1);
+        }
+        else if (t === 'item') {
+            return this.itemHTML(concept, nestLevel + 1);
+        }
+    }
+    groupHTML(group) {
+        var result = `<h2>${makeSafe(group['name'])}</h2>`,
+            items = group['items'];
+        if (items) {
+            result += '<table><thead><tr class="grouphed"><td></td></tr></thead>';
+            for (var item of items) {
+                result += this.conceptHTML(item, 0);
+            }
+            result += '</table>';
+        }
+        return result;
+    }
+    subgroupHTML(subgroup, nestLevel) {
+        var items = subgroup['items'],
+            result = `<tr class="t${++this.nextID} expanded ${items.length ? 'expandable' : ''}" data-nest="${nestLevel}"><td style="padding-left: ${nestLevel*10}px" colspan="1">${makeSafe(subgroup['name'])}</td></tr>`;
+        if (items) {
+            for (var item of items) {
+                result += this.conceptHTML(item, nestLevel + 1);
+            }
+        }
+        return result;
+    }
+    itemHTML(item, nestLevel) {
+        return `<tr id="${item['id']}" class="tableitem t${++this.nextID} expanded" data-nest="${nestLevel}"><td style="padding-left: ${nestLevel*10}px">${makeSafe(item['name'])}</td></tr>`;
+    }
+    addFormat(format) {
+        var support = format['support'],
+            safeName = makeSafe(format['name']),
+            rows = this.tableEl.querySelectorAll('tr'),
+            formatID = this.formats.length,
+            row, td, rowSupport, supportLevel, cellValue;
+        for (row of rows) {
+            if (hasClass(row, 'expandable')) {
+                td = row.childNodes[0];
+                td.setAttribute('colspan', parseInt(td.getAttribute('colspan'), 10) + 1);
+            }
+            else if (hasClass(row, 'grouphed')) {
+                cellValue = safeName;
+                if (format['infoUrl']) {
+                    cellValue += ` <a href="${makeSafe(format['infoUrl'])}">(Info)</a>`;
+                }
+                row.insertAdjacentHTML(
+                    'beforeend',
+                    `<td>${cellValue}</td>`
+                );
+            }
+            else {
+                cellValue = '';
+                supportLevel = 0;
+                if (row.id && support[row.id]) {
+                    rowSupport = support[row.id];
+                    if (rowSupport['text']) {
+                        cellValue = makeSafe(rowSupport['text']);
+                    }
+                    if (rowSupport['link']) {
+                        cellValue += ` (<a href="${makeSafe(rowSupport['link'])}">info</a>)`;
+                    }
+                    if (rowSupport['level']) {
+                        supportLevel = rowSupport['level'];
+                    }
+                }
+                row.insertAdjacentHTML(
+                    'beforeend',
+                    `<td class="format${formatID} support${supportLevel}">${cellValue}</td>`
+                );
+            }
+        }
+    }
+    toggleExpand(rowEl) {
+        var nest = parseInt(rowEl.dataset.nest, 10),
+            expanded = hasClass(rowEl, 'expanded'),
+            el = rowEl.nextSibling,
+            siblingNest;
+        while (el) {
+            siblingNest = parseInt(el.dataset.nest, 10);
+            if (siblingNest <= nest) {
+                break;
+            }
+            addRemoveClass(el, 'hidden', expanded);
+            addRemoveClass(el, 'expanded', !expanded);
+            el = el.nextSibling;
+        }
+        addRemoveClass(rowEl, 'expanded', !expanded);
+    }
+    expandAll() {
+        var rows = this.tableEl.querySelectorAll('tr'),
+            row;
+        for (row of rows) {
+            if (hasClass(row, 'tableitem')) {
+                removeClass(row, 'hidden');
+            }
+            else {
+                addClass(row, 'expanded');
+            }
+        }
+    }
+    collapseAll() {
+        var rows = this.tableEl.querySelectorAll('tr'),
+            row;
+        for (row of rows) {
+            if (hasClass(row, 'tableitem')) {
+                addClass(row, 'hidden');
+            }
+            else {
+                removeClass(row, 'expanded');
+            }
+        }
+    }
+}
+
+var table = new SupportTable(
+    gid('sidebarnav'),
+    gid('maintable'),
+    gid('formatinfo')
+);
+
+</script>
+</body>
+</html>

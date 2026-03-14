@@ -1,0 +1,5297 @@
+[
+  {
+    "type": "group",
+    "name": "Notes",
+    "items": [
+      {
+        "type": "subgroup",
+        "name": "Pitches",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "Pitch encoding",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-sounded-pitch",
+                "name": "Sounded pitch"
+              },
+              {
+                "type": "item",
+                "id": "note-written-pitch",
+                "name": "Written pitch (may differ from sounded for transposing instruments)"
+              },
+              {
+                "type": "item",
+                "id": "note-pitch-step",
+                "name": "Pitch step (diatonic letter name A-G)"
+              },
+              {
+                "type": "item",
+                "id": "note-pitch-octave",
+                "name": "Pitch octave"
+              },
+              {
+                "type": "item",
+                "id": "note-pitch-alter",
+                "name": "Pitch alteration (semitone offset from natural)"
+              },
+              {
+                "type": "item",
+                "id": "note-pitch-alter-microtone",
+                "name": "Microtonal alteration (sub-semitone precision)"
+              },
+              {
+                "type": "item",
+                "id": "note-pitch-enharmonic",
+                "name": "Enharmonic spelling (C♯ vs D♭)"
+              },
+              {
+                "type": "item",
+                "id": "note-pitch-staff-position",
+                "name": "Staff position override (display on specific line/space)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Ottava (octave displacement) lines",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-ottava-8va",
+                "name": "8va (one octave up)"
+              },
+              {
+                "type": "item",
+                "id": "note-ottava-8vb",
+                "name": "8vb / 8va bassa (one octave down)"
+              },
+              {
+                "type": "item",
+                "id": "note-ottava-15ma",
+                "name": "15ma (two octaves up)"
+              },
+              {
+                "type": "item",
+                "id": "note-ottava-15mb",
+                "name": "15mb (two octaves down)"
+              },
+              {
+                "type": "item",
+                "id": "note-ottava-22ma",
+                "name": "22ma (three octaves up, rare)"
+              },
+              {
+                "type": "item",
+                "id": "note-ottava-22mb",
+                "name": "22mb (three octaves down, rare)"
+              },
+              {
+                "type": "item",
+                "id": "note-ottava-cross-barline",
+                "name": "Ottava line spanning across barlines"
+              },
+              {
+                "type": "item",
+                "id": "note-ottava-cross-system",
+                "name": "Ottava line continuation across system/page breaks"
+              },
+              {
+                "type": "item",
+                "id": "note-ottava-endpoint-hook",
+                "name": "Ottava endpoint hook style (hook down, no hook, etc.)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Unpitched and percussion notes",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-unpitched-basic",
+                "name": "Unpitched notes"
+              },
+              {
+                "type": "item",
+                "id": "note-unpitched-display-position",
+                "name": "Staff position"
+              },
+              {
+                "type": "item",
+                "id": "note-unpitched-percussion-map",
+                "name": "Percussion map (mapping staff positions to/from sounds)"
+              },
+              {
+                "type": "item",
+                "id": "note-unpitched-slash",
+                "name": "Slash notation on pitched staves (rhythmic slashes)"
+              },
+              {
+                "type": "item",
+                "id": "note-unpitched-notehead-map",
+                "name": "Percussion notehead type per instrument (x, triangle, diamond, etc.)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Pitch bends (jazz/pop articulations)",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-bend-fall",
+                "name": "Fall (downward pitch release after note)"
+              },
+              {
+                "type": "item",
+                "id": "note-bend-doit",
+                "name": "Doit (upward pitch release after note)"
+              },
+              {
+                "type": "item",
+                "id": "note-bend-scoop",
+                "name": "Scoop (upward approach into note from below)"
+              },
+              {
+                "type": "item",
+                "id": "note-bend-plop",
+                "name": "Plop (downward approach into note from above)"
+              },
+              {
+                "type": "item",
+                "id": "note-bend-target",
+                "name": "Bend with specified target pitch"
+              },
+              {
+                "type": "item",
+                "id": "note-bend-prereleased",
+                "name": "Pre-bend and release"
+              },
+              {
+                "type": "item",
+                "id": "note-bend-microtone-arrow",
+                "name": "Microtonal bend arrows (e.g., quarter-tone bends)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Tuning and reference pitch",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-tuning-concert-freq",
+                "name": "Concert pitch reference frequency (A=440, A=415, etc.)"
+              },
+              {
+                "type": "item",
+                "id": "note-tuning-scordatura",
+                "name": "Scordatura (non-standard string/instrument tuning)"
+              },
+              {
+                "type": "item",
+                "id": "note-tuning-scordatura-display",
+                "name": "Scordatura display (notation shows fingered pitch vs. sounding)"
+              },
+              {
+                "type": "item",
+                "id": "note-tuning-system",
+                "name": "Custom tuning system definition (just intonation, Pythagorean, etc.)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Accidentals",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "Standard accidentals",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-accidental-sharp",
+                "name": "Sharp"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-flat",
+                "name": "Flat"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-natural",
+                "name": "Natural"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-double-sharp",
+                "name": "Double sharp"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-double-flat",
+                "name": "Double flat"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-triple-sharp",
+                "name": "Triple sharp"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-triple-flat",
+                "name": "Triple flat"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Combination accidentals",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-accidental-natural-sharp",
+                "name": "Natural + sharp (cancellation then alteration)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-natural-flat",
+                "name": "Natural + flat (cancellation then alteration)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-sharp-sharp",
+                "name": "Sharp + sharp (visual alternative to double sharp)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-flat-flat",
+                "name": "Flat + flat (visual alternative to double flat)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Quarter-tone accidentals",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-accidental-quarter-sharp",
+                "name": "Quarter-tone sharp (half sharp / demisharp)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-quarter-flat",
+                "name": "Quarter-tone flat (half flat / demiflat)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-three-quarter-sharp",
+                "name": "Three-quarter-tone sharp (sesquisharp)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-three-quarter-flat",
+                "name": "Three-quarter-tone flat (sesquiflat)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Microtonal notation systems",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-accidental-micro-stein-zimmermann",
+                "name": "Stein-Zimmermann quarter-tone notation"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-micro-helmholtz-ellis",
+                "name": "Helmholtz-Ellis Just Intonation Pitch Notation (HEJI)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-micro-sagittal",
+                "name": "Sagittal notation"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-micro-johnston",
+                "name": "Ben Johnston notation (extended just intonation)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-micro-wyschnegradsky",
+                "name": "Wyschnegradsky notation (72-TET and others)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-micro-sims",
+                "name": "Sims notation (72-TET)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-micro-maneri",
+                "name": "Maneri-Sims notation (72-TET)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-micro-arbitrary-cents",
+                "name": "Arbitrary cent deviation value"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Non-Western accidentals",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-accidental-persian-koron",
+                "name": "Persian koron (quarter-tone flat)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-persian-sori",
+                "name": "Persian sori (quarter-tone sharp)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-turkish-comma",
+                "name": "Turkish comma accidentals (koma, bakiye, küçük mücenneb, etc.)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-arabic-halfflat",
+                "name": "Arabic half-flat"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-arabic-halfsharp",
+                "name": "Arabic half-sharp"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Display",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-accidental-display",
+                "name": "Whether accidental is displayed (force show / force hide)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-parens",
+                "name": "Parentheses around accidental"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-bracket",
+                "name": "Brackets around accidental"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-editorial",
+                "name": "Editorial accidental (small, above note)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-ficta",
+                "name": "Ficta accidental (editorial accidental in early music)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-size",
+                "name": "Accidental size (normal, cue/grace, editorial)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-smufl-glyph",
+                "name": "Explicit SMuFL glyph for accidental"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Cautionary (courtesy) accidentals",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-accidental-courtesy-after-barline",
+                "name": "Courtesy accidental on pitch restated after barline"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-courtesy-after-keysig",
+                "name": "Courtesy accidental after key signature change"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-courtesy-other-octave",
+                "name": "Courtesy accidental when same pitch class altered in another octave"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-courtesy-other-voice",
+                "name": "Courtesy accidental when same pitch altered in another voice"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-courtesy-other-staff",
+                "name": "Courtesy accidental when same pitch altered on another staff"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-courtesy-after-tie",
+                "name": "Courtesy accidental on note following a tied note"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-courtesy-after-endings",
+                "name": "Courtesy accidental after first/second endings (volta brackets)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Chord accidental layout",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-accidental-chord-stacking",
+                "name": "Accidental stacking order / graphical position of accidentals"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Scope and cancellation rules",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-accidental-scope-measure",
+                "name": "Accidental carries through the measure (modern convention)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-scope-octave",
+                "name": "Accidental applies only to the specific octave"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-scope-all-octaves",
+                "name": "Accidental applies to all octaves of that pitch class"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-scope-single-note",
+                "name": "Accidental applies only to the single note (Second Viennese School convention)"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-cancel-barline",
+                "name": "Accidental canceled by barline"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-cancel-keysig",
+                "name": "Accidental canceled by key signature change"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-persist-tied",
+                "name": "Accidental persists through tied notes"
+              },
+              {
+                "type": "item",
+                "id": "note-accidental-grace-affect-main",
+                "name": "Grace note accidentals affecting subsequent main notes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Ties",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "Basic tie encoding",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-tie-start",
+                "name": "Tie start"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-end",
+                "name": "Tie end"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-chain",
+                "name": "Tie chain (multiple consecutive ties, e.g., whole note across three bars)"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-target-id",
+                "name": "Explicit tie target identification (reference to end note)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Tie types",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-tie-normal",
+                "name": "Standard (solid) tie"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-dashed",
+                "name": "Dashed tie (editorial or ossia)"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-dotted",
+                "name": "Dotted tie"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-lv",
+                "name": "Laissez vibrer (l.v.) tie (open-ended, no target note)"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-incoming",
+                "name": "Incoming tie (no visible source, e.g., after repeat or system start)"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-enharmonic",
+                "name": "Enharmonic ties (e.g., C♯ tied to D♭)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Ties across structural boundaries",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-tie-across-barline",
+                "name": "Tie across barline (basic case)"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-across-system",
+                "name": "Tie split across system/page break (two half-arcs)"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-across-repeat",
+                "name": "Tie across repeat barlines"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-across-volta",
+                "name": "Tie across volta brackets (first/second endings)"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-across-jump",
+                "name": "Tie across jumps (D.S., D.C.)"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-into-coda",
+                "name": "Tie into/out of coda section"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Ties in chords",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-tie-chord-multiple",
+                "name": "Multiple simultaneous ties in a chord"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-chord-partial",
+                "name": "Partial chord ties (only some notes in chord tied)"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-chord-seconds",
+                "name": "Ties on adjacent seconds in a chord"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-chord-unison",
+                "name": "Ties on unisons (same pitch in different voices)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Tie rendering and placement",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-tie-position",
+                "name": "Curve direction (above or below notes)"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-cross-staff",
+                "name": "Cross-staff ties (notes on different staves of same instrument)"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-cross-voice",
+                "name": "Cross-voice ties (note tied into a different voice)"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-endpoint",
+                "name": "Tie endpoint positioning relative to notehead"
+              },
+              {
+                "type": "item",
+                "id": "note-tie-curvature",
+                "name": "Tie curvature / shape control points"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Markings (articulations, ornaments, etc.)",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "Articulations",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-accent",
+                "name": "Accent"
+              },
+              {
+                "type": "item",
+                "id": "event-strong-accent",
+                "name": "Strong accent (marcato)"
+              },
+              {
+                "type": "item",
+                "id": "event-staccato",
+                "name": "Staccato"
+              },
+              {
+                "type": "item",
+                "id": "event-staccatissimo",
+                "name": "Staccatissimo"
+              },
+              {
+                "type": "item",
+                "id": "event-tenuto",
+                "name": "Tenuto"
+              },
+              {
+                "type": "item",
+                "id": "event-tenuto-staccato",
+                "name": "Mezzo-staccato / portato (tenuto + staccato)"
+              },
+              {
+                "type": "item",
+                "id": "event-accent-staccato",
+                "name": "Accent-staccato"
+              },
+              {
+                "type": "item",
+                "id": "event-marcato-staccato",
+                "name": "Marcato-staccato"
+              },
+              {
+                "type": "item",
+                "id": "event-marcato-tenuto",
+                "name": "Marcato-tenuto"
+              },
+              {
+                "type": "item",
+                "id": "event-tenuto-accent",
+                "name": "Tenuto-accent"
+              },
+              {
+                "type": "item",
+                "id": "event-soft-accent",
+                "name": "Soft accent"
+              },
+              {
+                "type": "item",
+                "id": "event-stress",
+                "name": "Stress"
+              },
+              {
+                "type": "item",
+                "id": "event-unstress",
+                "name": "Unstress"
+              },
+              {
+                "type": "item",
+                "id": "event-detached-legato",
+                "name": "Detached legato (tenuto under slur)"
+              },
+              {
+                "type": "item",
+                "id": "event-articulation-placement",
+                "name": "Articulation placement (above/below staff)"
+              },
+              {
+                "type": "item",
+                "id": "event-articulation-stacking",
+                "name": "Position/order of multiple stacked articulations on one note"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Fermatas",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-fermata-normal",
+                "name": "Normal fermata"
+              },
+              {
+                "type": "item",
+                "id": "event-fermata-long",
+                "name": "Long (square) fermata"
+              },
+              {
+                "type": "item",
+                "id": "event-fermata-very-long",
+                "name": "Very long fermata"
+              },
+              {
+                "type": "item",
+                "id": "event-fermata-short",
+                "name": "Short (triangular / Henze) fermata"
+              },
+              {
+                "type": "item",
+                "id": "event-fermata-very-short",
+                "name": "Very short fermata"
+              },
+              {
+                "type": "item",
+                "id": "event-fermata-orientation",
+                "name": "Fermata orientation (upright vs. inverted)"
+              },
+              {
+                "type": "item",
+                "id": "event-fermata-barline",
+                "name": "Fermata over barline"
+              },
+              {
+                "type": "item",
+                "id": "event-fermata-rest",
+                "name": "Fermata over rest"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Breath marks and caesuras",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-breath",
+                "name": "Breath mark"
+              },
+              {
+                "type": "item",
+                "id": "event-breath-symbol",
+                "name": "Breath mark symbol (comma, tick, Salzedo, etc.)"
+              },
+              {
+                "type": "item",
+                "id": "event-caesura",
+                "name": "Caesura (railroad tracks)"
+              },
+              {
+                "type": "item",
+                "id": "event-caesura-type",
+                "name": "Caesura type (normal, thick, short, curved)"
+              },
+              {
+                "type": "item",
+                "id": "event-caesura-placement",
+                "name": "Caesura placement (between notes vs. at barline)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Ornaments",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-trill",
+                "name": "Trill (tr)"
+              },
+              {
+                "type": "item",
+                "id": "event-trill-accidental",
+                "name": "Trill with accidental on auxiliary note"
+              },
+              {
+                "type": "item",
+                "id": "event-trill-line",
+                "name": "Trill line (wavy extension)"
+              },
+              {
+                "type": "item",
+                "id": "event-trill-line-cross-system",
+                "name": "Trill line continuation across system/page break"
+              },
+              {
+                "type": "item",
+                "id": "event-turn",
+                "name": "Turn"
+              },
+              {
+                "type": "item",
+                "id": "event-turn-inverted",
+                "name": "Inverted turn"
+              },
+              {
+                "type": "item",
+                "id": "event-turn-delayed",
+                "name": "Delayed turn (placed between notes)"
+              },
+              {
+                "type": "item",
+                "id": "event-turn-accidentals",
+                "name": "Turn with accidentals (above and/or below)"
+              },
+              {
+                "type": "item",
+                "id": "event-mordent",
+                "name": "Mordent"
+              },
+              {
+                "type": "item",
+                "id": "event-mordent-inverted",
+                "name": "Inverted mordent"
+              },
+              {
+                "type": "item",
+                "id": "event-mordent-double",
+                "name": "Double mordent (Prallpraller)"
+              },
+              {
+                "type": "item",
+                "id": "event-mordent-accidental",
+                "name": "Mordent with accidental"
+              },
+              {
+                "type": "item",
+                "id": "event-schleifer",
+                "name": "Schleifer (Baroque slide ornament)"
+              },
+              {
+                "type": "item",
+                "id": "event-shake",
+                "name": "Shake"
+              },
+              {
+                "type": "item",
+                "id": "event-nachschlag",
+                "name": "Nachschlag (ornamental notes after main note)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Tremolos",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-tremolo",
+                "name": "Single-note tremolo"
+              },
+              {
+                "type": "item",
+                "id": "event-tremolo-strokes",
+                "name": "Tremolo stroke count (1, 2, or 3 slashes)"
+              },
+              {
+                "type": "item",
+                "id": "event-tremolo-multi",
+                "name": "Multi-note tremolo"
+              },
+              {
+                "type": "item",
+                "id": "event-buzz-roll",
+                "name": "Buzz roll (percussion Z on stem)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Grace notes",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-grace-acciaccatura",
+                "name": "Acciaccatura (slashed stem, short grace note)"
+              },
+              {
+                "type": "item",
+                "id": "event-grace-appoggiatura",
+                "name": "Appoggiatura (unslashed stem, long grace note)"
+              },
+              {
+                "type": "item",
+                "id": "event-grace-multiple",
+                "name": "Multiple consecutive grace notes"
+              },
+              {
+                "type": "item",
+                "id": "event-grace-beaming",
+                "name": "Grace note beaming"
+              },
+              {
+                "type": "item",
+                "id": "event-grace-chord",
+                "name": "Grace note chords"
+              },
+              {
+                "type": "item",
+                "id": "event-grace-after",
+                "name": "Grace notes after main note (post-grace)"
+              },
+              {
+                "type": "item",
+                "id": "event-grace-steal-time",
+                "name": "Grace note timing (steal from previous vs. following note)"
+              },
+              {
+                "type": "item",
+                "id": "event-grace-slur",
+                "name": "Slur from grace note to main note"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Dynamics",
+            "items": [
+              {
+                "type": "subgroup",
+                "name": "Dynamic levels",
+                "items": [
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-p",
+                    "name": "Piano (p)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-pp",
+                    "name": "Pianissimo (pp)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-ppp",
+                    "name": "Pianississimo (ppp)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-pppp-plus",
+                    "name": "Extended piano (pppp, ppppp, pppppp)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-mp",
+                    "name": "Mezzo-piano (mp)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-mf",
+                    "name": "Mezzo-forte (mf)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-f",
+                    "name": "Forte (f)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-ff",
+                    "name": "Fortissimo (ff)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-fff",
+                    "name": "Fortississimo (fff)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-ffff-plus",
+                    "name": "Extended forte (ffff, fffff, ffffff)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-sfz",
+                    "name": "Sforzando (sfz)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-sf",
+                    "name": "Sforzato (sf)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-sff",
+                    "name": "Sforzato fortissimo (sff)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-sffz",
+                    "name": "Sforzato fortissimo z (sffz)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-sfp",
+                    "name": "Sforzando-piano (sfp)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-sfpp",
+                    "name": "Sforzando-pianissimo (sfpp)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-fp",
+                    "name": "Forte-piano (fp)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-fz",
+                    "name": "Forzando (fz)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-rf",
+                    "name": "Rinforzando (rf)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-rfz",
+                    "name": "Rinforzando z (rfz)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-n",
+                    "name": "Niente (n)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-custom",
+                    "name": "Custom/arbitrary dynamic text"
+                  }
+                ]
+              },
+              {
+                "type": "subgroup",
+                "name": "Hairpins and wedges",
+                "items": [
+                  {
+                    "type": "item",
+                    "id": "event-hairpin-cresc",
+                    "name": "Hairpin crescendo"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-hairpin-decresc",
+                    "name": "Hairpin decrescendo (diminuendo)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-hairpin-niente-start",
+                    "name": "Hairpin from niente (circle at closed end)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-hairpin-niente-end",
+                    "name": "Hairpin to niente (circle at closed end)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-hairpin-to-dynamic",
+                    "name": "Hairpin ending at a specific dynamic marking"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-hairpin-subito",
+                    "name": "Subito hairpin (immediate change, no gradual wedge)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-hairpin-cross-system",
+                    "name": "Hairpin continuation across system/page break"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-hairpin-opening-width",
+                    "name": "Hairpin opening width"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-hairpin-vertical-position",
+                    "name": "Hairpin vertical position"
+                  }
+                ]
+              },
+              {
+                "type": "subgroup",
+                "name": "Text-based dynamics",
+                "items": [
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-text-cresc",
+                    "name": "cresc. (with optional dashed continuation line)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-text-decresc",
+                    "name": "decresc. / dim. (with optional dashed continuation line)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-text-poco-a-poco",
+                    "name": "Gradual dynamic text (poco a poco cresc., etc.)"
+                  }
+                ]
+              },
+              {
+                "type": "subgroup",
+                "name": "Dynamic display",
+                "items": [
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-placement",
+                    "name": "Dynamic placement (above/below staff)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-between-staves",
+                    "name": "Dynamic between staves (keyboard/harp)"
+                  },
+                  {
+                    "type": "item",
+                    "id": "event-dynamic-alignment",
+                    "name": "Dynamic aligned to note vs. offset"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Slurs",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-slur-basic",
+                "name": "Basic slur"
+              },
+              {
+                "type": "item",
+                "id": "event-slur-direction",
+                "name": "Slur direction (above/below)"
+              },
+              {
+                "type": "item",
+                "id": "event-slur-nested",
+                "name": "Nested slurs (slur within a slur)"
+              },
+              {
+                "type": "item",
+                "id": "event-slur-dashed",
+                "name": "Dashed slur (editorial or ossia)"
+              },
+              {
+                "type": "item",
+                "id": "event-slur-dotted",
+                "name": "Dotted slur"
+              },
+              {
+                "type": "item",
+                "id": "event-slur-wavy",
+                "name": "Wavy slur"
+              },
+              {
+                "type": "item",
+                "id": "event-slur-cross-staff",
+                "name": "Cross-staff slur"
+              },
+              {
+                "type": "item",
+                "id": "event-slur-cross-voice",
+                "name": "Cross-voice slur"
+              },
+              {
+                "type": "item",
+                "id": "event-slur-cross-system",
+                "name": "Slur continuation across system/page break"
+              },
+              {
+                "type": "item",
+                "id": "event-slur-endpoint",
+                "name": "Slur endpoint positioning (notehead side vs. stem side)"
+              },
+              {
+                "type": "item",
+                "id": "event-slur-shape",
+                "name": "Slur shape / control point adjustments"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Glissando and portamento",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-gliss-straight",
+                "name": "Glissando line (straight)"
+              },
+              {
+                "type": "item",
+                "id": "event-gliss-wavy",
+                "name": "Glissando line (wavy)"
+              },
+              {
+                "type": "item",
+                "id": "event-gliss-text",
+                "name": "Glissando with text (\"gliss.\", \"port.\", etc.)"
+              },
+              {
+                "type": "item",
+                "id": "event-gliss-cross-staff",
+                "name": "Glissando between staves"
+              },
+              {
+                "type": "item",
+                "id": "event-portamento",
+                "name": "Portamento (smooth pitch slide, distinct from glissando)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Arpeggio marks",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-arpeggio-up",
+                "name": "Arpeggiate up (wavy line with upward arrow)"
+              },
+              {
+                "type": "item",
+                "id": "event-arpeggio-down",
+                "name": "Arpeggiate down (wavy line with downward arrow)"
+              },
+              {
+                "type": "item",
+                "id": "event-arpeggio-cross-staff",
+                "name": "Arpeggio spanning staves (e.g., piano)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Bowing and string techniques",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-bow-down",
+                "name": "Down-bow"
+              },
+              {
+                "type": "item",
+                "id": "event-bow-up",
+                "name": "Up-bow"
+              },
+              {
+                "type": "item",
+                "id": "event-string-open",
+                "name": "Open string"
+              },
+              {
+                "type": "item",
+                "id": "event-string-snap-pizz",
+                "name": "Snap (Bartók) pizzicato"
+              },
+              {
+                "type": "item",
+                "id": "event-string-lh-pizz",
+                "name": "Left-hand pizzicato (+)"
+              },
+              {
+                "type": "item",
+                "id": "event-spiccato",
+                "name": "Spiccato"
+              },
+              {
+                "type": "item",
+                "id": "event-string-sul-pont",
+                "name": "Sul ponticello"
+              },
+              {
+                "type": "item",
+                "id": "event-string-sul-tasto",
+                "name": "Sul tasto (sulla tastiera)"
+              },
+              {
+                "type": "item",
+                "id": "event-string-col-legno-battuto",
+                "name": "Col legno battuto"
+              },
+              {
+                "type": "item",
+                "id": "event-string-col-legno-tratto",
+                "name": "Col legno tratto"
+              },
+              {
+                "type": "item",
+                "id": "event-string-con-sordino",
+                "name": "Con sordino / senza sordino (mute on/off)"
+              },
+              {
+                "type": "item",
+                "id": "event-string-martele",
+                "name": "Martelé"
+              },
+              {
+                "type": "item",
+                "id": "event-string-ricochet",
+                "name": "Ricochet / jeté"
+              },
+              {
+                "type": "item",
+                "id": "event-string-behind-bridge",
+                "name": "Behind the bridge"
+              },
+              {
+                "type": "item",
+                "id": "event-string-number",
+                "name": "String number indication (I, II, III, IV)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Harmonics",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-harmonic-natural",
+                "name": "Natural harmonic (open circle above note)"
+              },
+              {
+                "type": "item",
+                "id": "event-harmonic-artificial",
+                "name": "Artificial harmonic (diamond notehead for touched pitch)"
+              },
+              {
+                "type": "item",
+                "id": "event-harmonic-sounding",
+                "name": "Harmonic with sounding pitch indication"
+              },
+              {
+                "type": "item",
+                "id": "event-harmonic-pinch",
+                "name": "Pinch harmonic (guitar)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Keyboard markings",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-pedal-sustain-down",
+                "name": "Sustain pedal down (Ped.)"
+              },
+              {
+                "type": "item",
+                "id": "event-pedal-sustain-up",
+                "name": "Sustain pedal up (*)"
+              },
+              {
+                "type": "item",
+                "id": "event-pedal-change",
+                "name": "Pedal change (retake)"
+              },
+              {
+                "type": "item",
+                "id": "event-pedal-line",
+                "name": "Pedal line with notch marks"
+              },
+              {
+                "type": "item",
+                "id": "event-pedal-half",
+                "name": "Half-pedal"
+              },
+              {
+                "type": "item",
+                "id": "event-pedal-sostenuto",
+                "name": "Sostenuto pedal"
+              },
+              {
+                "type": "item",
+                "id": "event-pedal-una-corda",
+                "name": "Una corda / tre corde (soft pedal)"
+              },
+              {
+                "type": "item",
+                "id": "event-pedal-cross-system",
+                "name": "Pedal line continuation across system/page break"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Fingering",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-fingering-number",
+                "name": "Fingering number (1-5)"
+              },
+              {
+                "type": "item",
+                "id": "event-fingering-substitution",
+                "name": "Finger substitution (e.g., 2-1 on a held note)"
+              },
+              {
+                "type": "item",
+                "id": "event-fingering-placement",
+                "name": "Fingering placement (above, below, beside notehead)"
+              },
+              {
+                "type": "item",
+                "id": "event-fingering-chord",
+                "name": "Fingering on chords (multiple fingers stacked)"
+              },
+              {
+                "type": "item",
+                "id": "event-fingering-thumb",
+                "name": "Thumb indication (thumb symbol or 0)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Plucked string markings",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-pluck-rh-fingering",
+                "name": "Right-hand fingering (p, i, m, a, c)"
+              },
+              {
+                "type": "item",
+                "id": "event-pluck-lh-fingering",
+                "name": "Left-hand fingering (guitar)"
+              },
+              {
+                "type": "item",
+                "id": "event-pluck-hammer-on",
+                "name": "Hammer-on"
+              },
+              {
+                "type": "item",
+                "id": "event-pluck-pull-off",
+                "name": "Pull-off"
+              },
+              {
+                "type": "item",
+                "id": "event-pluck-tap",
+                "name": "Tap"
+              },
+              {
+                "type": "item",
+                "id": "event-pluck-rasgueado",
+                "name": "Rasgueado"
+              },
+              {
+                "type": "item",
+                "id": "event-pluck-golpe",
+                "name": "Golpe"
+              },
+              {
+                "type": "item",
+                "id": "event-pluck-barre",
+                "name": "Barré marking (full or partial, with fret)"
+              },
+              {
+                "type": "item",
+                "id": "event-pluck-string-number",
+                "name": "String number (circled)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Harp markings",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-harp-pedal-diagram",
+                "name": "Harp pedal diagram"
+              },
+              {
+                "type": "item",
+                "id": "event-harp-pedal-text",
+                "name": "Harp pedal setting as text"
+              },
+              {
+                "type": "item",
+                "id": "event-harp-bisbigliando",
+                "name": "Bisbigliando (tremolo between enharmonic strings)"
+              },
+              {
+                "type": "item",
+                "id": "event-harp-pres-de-la-table",
+                "name": "Près de la table (near the soundboard)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Wind and brass techniques",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-wind-flutter-tongue",
+                "name": "Flutter tongue"
+              },
+              {
+                "type": "item",
+                "id": "event-wind-double-tongue",
+                "name": "Double tongue"
+              },
+              {
+                "type": "item",
+                "id": "event-wind-triple-tongue",
+                "name": "Triple tongue"
+              },
+              {
+                "type": "item",
+                "id": "event-brass-stopped",
+                "name": "Stopped / muted (+)"
+              },
+              {
+                "type": "item",
+                "id": "event-brass-open",
+                "name": "Open (o)"
+              },
+              {
+                "type": "item",
+                "id": "event-wind-multiphonic",
+                "name": "Multiphonics"
+              },
+              {
+                "type": "item",
+                "id": "event-wind-overblow",
+                "name": "Overblow"
+              },
+              {
+                "type": "item",
+                "id": "event-wind-key-click",
+                "name": "Key click"
+              },
+              {
+                "type": "item",
+                "id": "event-wind-air-sound",
+                "name": "Air sound (breathy, no pitch)"
+              },
+              {
+                "type": "item",
+                "id": "event-wind-tongue-ram",
+                "name": "Tongue ram"
+              },
+              {
+                "type": "item",
+                "id": "event-brass-mute-type",
+                "name": "Mute type (straight, cup, harmon, plunger, etc.)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Percussion techniques",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-perc-dead-stroke",
+                "name": "Dead stroke (muffled immediately after striking)"
+              },
+              {
+                "type": "item",
+                "id": "event-perc-rim-shot",
+                "name": "Rim shot"
+              },
+              {
+                "type": "item",
+                "id": "event-perc-cross-stick",
+                "name": "Cross-stick (side stick)"
+              },
+              {
+                "type": "item",
+                "id": "event-perc-stick-type",
+                "name": "Sticking indication (L, R, etc.)"
+              },
+              {
+                "type": "item",
+                "id": "event-perc-choke",
+                "name": "Choke (cymbal)"
+              },
+              {
+                "type": "item",
+                "id": "event-perc-let-ring",
+                "name": "Let ring / laissez vibrer (cymbal, triangle, etc.)"
+              },
+              {
+                "type": "item",
+                "id": "event-perc-roll",
+                "name": "Roll (sustained tremolo with ties)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Vocal markings",
+            "items": [
+              {
+                "type": "item",
+                "id": "event-vocal-syllabic-stress",
+                "name": "Syllabic stress marking"
+              },
+              {
+                "type": "item",
+                "id": "event-vocal-humming",
+                "name": "Humming indication"
+              },
+              {
+                "type": "item",
+                "id": "event-vocal-mouth-closed",
+                "name": "Mouth closed / bocca chiusa"
+              },
+              {
+                "type": "item",
+                "id": "event-vocal-falsetto",
+                "name": "Falsetto indication"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Stems",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "Stem direction",
+            "items": [
+              {
+                "type": "item",
+                "id": "stem-direction-auto",
+                "name": "Automatic stem direction (based on note position on staff)"
+              },
+              {
+                "type": "item",
+                "id": "stem-direction-override",
+                "name": "Stem direction override (force up or down)"
+              },
+              {
+                "type": "item",
+                "id": "stem-direction-voice",
+                "name": "Stem direction policy for voice (e.g., voice 1 up, voice 2 down)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Stem length",
+            "items": [
+              {
+                "type": "item",
+                "id": "stem-length-default",
+                "name": "Default stem length for document"
+              },
+              {
+                "type": "item",
+                "id": "stem-length-override",
+                "name": "Explicit stem length for a note/chord"
+              },
+              {
+                "type": "item",
+                "id": "stem-length-hidden",
+                "name": "Stem suppression (on normally stemmed notes)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Stem display",
+            "items": [
+              {
+                "type": "item",
+                "id": "stem-thickness",
+                "name": "Stem thickness"
+              },
+              {
+                "type": "item",
+                "id": "stem-color",
+                "name": "Stem color override"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Noteheads",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "Standard noteheads",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-notehead-filled",
+                "name": "Filled (black) notehead (quarter and shorter)"
+              },
+              {
+                "type": "item",
+                "id": "note-notehead-open",
+                "name": "Open (white) notehead (half note)"
+              },
+              {
+                "type": "item",
+                "id": "note-notehead-whole",
+                "name": "Whole note notehead"
+              },
+              {
+                "type": "item",
+                "id": "note-notehead-breve",
+                "name": "Breve notehead (with or without vertical lines)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Special noteheads",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-notehead-x",
+                "name": "X notehead (dead note, spoken, etc.)"
+              },
+              {
+                "type": "item",
+                "id": "note-notehead-diamond",
+                "name": "Diamond notehead (harmonics)"
+              },
+              {
+                "type": "item",
+                "id": "note-notehead-triangle",
+                "name": "Triangle notehead"
+              },
+              {
+                "type": "item",
+                "id": "note-notehead-slash",
+                "name": "Slash notehead (rhythmic notation)"
+              },
+              {
+                "type": "item",
+                "id": "note-notehead-plus",
+                "name": "Plus notehead"
+              },
+              {
+                "type": "item",
+                "id": "note-notehead-circle-x",
+                "name": "Circle-X notehead"
+              },
+              {
+                "type": "item",
+                "id": "note-notehead-square",
+                "name": "Square (La-based shape note) notehead"
+              },
+              {
+                "type": "item",
+                "id": "note-notehead-parenthesized",
+                "name": "Parenthesized notehead (ghost note, optional note)"
+              },
+              {
+                "type": "item",
+                "id": "note-notehead-cluster-second",
+                "name": "Cluster notehead (solid block for seconds)"
+              },
+              {
+                "type": "item",
+                "id": "note-notehead-smufl",
+                "name": "Explicit SMuFL glyph for notehead"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Shape note systems",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-notehead-shape-4",
+                "name": "4-shape system (Sacred Harp: triangle, circle, square, diamond)"
+              },
+              {
+                "type": "item",
+                "id": "note-notehead-shape-7",
+                "name": "7-shape system (Aiken or Walker noteheads)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Notehead display",
+            "items": [
+              {
+                "type": "item",
+                "id": "note-notehead-size",
+                "name": "Notehead size (normal, cue, grace)"
+              },
+              {
+                "type": "item",
+                "id": "note-notehead-color",
+                "name": "Notehead color override"
+              },
+              {
+                "type": "item",
+                "id": "note-notehead-hidden",
+                "name": "Hidden notehead (stem and other markings still visible)"
+              },
+              {
+                "type": "item",
+                "id": "note-notehead-filled-override",
+                "name": "Filled/open override (e.g., filled half note for white mensural)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Beams",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "Beam encoding",
+            "items": [
+              {
+                "type": "item",
+                "id": "beam-basic",
+                "name": "Basic beaming (encoding the fact that notes are beamed together)"
+              },
+              {
+                "type": "item",
+                "id": "beam-secondary",
+                "name": "Secondary beams (encoding inner beam groupings)"
+              },
+              {
+                "type": "item",
+                "id": "beam-hooks",
+                "name": "Beam hooks (partial beams / fractional beams)"
+              },
+              {
+                "type": "item",
+                "id": "beam-hook-direction",
+                "name": "Hook direction (forward vs. backward)"
+              },
+              {
+                "type": "item",
+                "id": "beam-explicit-vs-auto",
+                "name": "Explicit beam encoding vs. auto-beaming from time signature"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Automatic beam grouping",
+            "items": [
+              {
+                "type": "item",
+                "id": "beam-group-by-beat",
+                "name": "Auto beaming grouped by beat (e.g., 4/4 = four groups)"
+              },
+              {
+                "type": "item",
+                "id": "beam-group-compound",
+                "name": "Auto beaming for compound meter (e.g., 6/8 = two groups of three)"
+              },
+              {
+                "type": "item",
+                "id": "beam-group-irregular",
+                "name": "Auto beaming for irregular/asymmetric timesigs (e.g., 5/8 as 3+2 or 2+3)"
+              },
+              {
+                "type": "item",
+                "id": "beam-group-override",
+                "name": "Overriding auto beaming"
+              },
+              {
+                "type": "item",
+                "id": "beam-subgroup-break",
+                "name": "Auto beaming of secondary beam breaks within a beam group"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Cross-boundary beams",
+            "items": [
+              {
+                "type": "item",
+                "id": "beam-over-barlines",
+                "name": "Beams over barlines"
+              },
+              {
+                "type": "item",
+                "id": "beam-over-rests",
+                "name": "Beams over rests"
+              },
+              {
+                "type": "item",
+                "id": "beam-cross-staff",
+                "name": "Cross-staff beams (beam shared between staves)"
+              },
+              {
+                "type": "item",
+                "id": "beam-cross-staff-inner",
+                "name": "Individual notes crossing staff within a beam group"
+              },
+              {
+                "type": "item",
+                "id": "beam-cross-voice",
+                "name": "Cross-voice beams"
+              },
+              {
+                "type": "item",
+                "id": "beam-cross-system",
+                "name": "Beams across system/page breaks"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Beam rendering",
+            "items": [
+              {
+                "type": "item",
+                "id": "beam-slope",
+                "name": "Beam slope (angle of beam line)"
+              },
+              {
+                "type": "item",
+                "id": "beam-thickness",
+                "name": "Beam thickness"
+              },
+              {
+                "type": "item",
+                "id": "beam-secondary-gap",
+                "name": "Gap between primary and secondary beam lines"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Special beaming situations",
+            "items": [
+              {
+                "type": "item",
+                "id": "beam-grace",
+                "name": "Grace note beams"
+              },
+              {
+                "type": "item",
+                "id": "beam-tuplet",
+                "name": "Beams within tuplets"
+              },
+              {
+                "type": "item",
+                "id": "beam-tremolo",
+                "name": "Beams on tremolo notes"
+              },
+              {
+                "type": "item",
+                "id": "beam-feathered-accel",
+                "name": "Feathered beams: accelerando (converging)"
+              },
+              {
+                "type": "item",
+                "id": "beam-feathered-rit",
+                "name": "Feathered beams: ritardando (diverging)"
+              },
+              {
+                "type": "item",
+                "id": "beam-fan-count",
+                "name": "Feathered beam line count (start and end number of beams)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "name": "Rhythms",
+    "items": [
+      {
+        "type": "subgroup",
+        "name": "Note values",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "Standard note values",
+            "items": [
+              {
+                "type": "item",
+                "id": "rhythm-maxima",
+                "name": "Maxima (8 whole notes)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-longa",
+                "name": "Longa (4 whole notes)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-breve",
+                "name": "Breve / double whole note"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-whole",
+                "name": "Whole note (semibreve)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-half",
+                "name": "Half note (minim)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-quarter",
+                "name": "Quarter note (crotchet)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-eighth",
+                "name": "Eighth note (quaver)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-16th",
+                "name": "16th note (semiquaver)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-32nd",
+                "name": "32nd note (demisemiquaver)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-64th",
+                "name": "64th note (hemidemisemiquaver)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-128th",
+                "name": "128th note"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-256th",
+                "name": "256th note"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-512th",
+                "name": "512th note"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-1024th",
+                "name": "1024th note"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-2048th",
+                "name": "2048th note"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-4096th",
+                "name": "4096th note"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Augmentation dots",
+        "items": [
+          {
+            "type": "item",
+            "id": "rhythm-dot-single",
+            "name": "Single dot"
+          },
+          {
+            "type": "item",
+            "id": "rhythm-dot-double",
+            "name": "Double dot"
+          },
+          {
+            "type": "item",
+            "id": "rhythm-dot-triple",
+            "name": "Triple dot"
+          },
+          {
+            "type": "item",
+            "id": "rhythm-dot-quadruple",
+            "name": "Quadruple dot (rare)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Tuplets",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "Common tuplets",
+            "items": [
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-triplet",
+                "name": "Triplet (3 in the space of 2)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-duplet",
+                "name": "Duplet (2 in the space of 3, in compound meter)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-quintuplet",
+                "name": "Quintuplet (5:4)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-sextuplet",
+                "name": "Sextuplet (6:4)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-septuplet",
+                "name": "Septuplet (7:4 or 7:8)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-arbitrary",
+                "name": "Arbitrary tuplet ratio (n in the space of m)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Tuplet contents",
+            "items": [
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-mixed-values",
+                "name": "Tuplet with mixed note values (e.g., quarter + eighth in a triplet)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-with-rests",
+                "name": "Tuplet containing rests"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-with-dots",
+                "name": "Tuplet containing dotted notes"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-with-ties",
+                "name": "Tuplet containing tied notes"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Complex tuplet structures",
+            "items": [
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-nested",
+                "name": "Nested tuplets (tuplet within a tuplet)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-cross-barline",
+                "name": "Tuplet spanning across barlines"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-cross-beam",
+                "name": "Tuplet split across separate beam groups"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-cross-voice",
+                "name": "Tuplet with notes in different voices"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Tuplet display",
+            "items": [
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-number",
+                "name": "Tuplet number display (e.g., \"3\")"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-ratio",
+                "name": "Tuplet ratio display (e.g., \"3:2\")"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-note-value",
+                "name": "Tuplet number with graphical note value (e.g., \"3♪\")"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-bracket-show",
+                "name": "Tuplet bracket show/hide"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-bracket-direction",
+                "name": "Tuplet bracket direction (above/below)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-bracket-shape",
+                "name": "Tuplet bracket shape (straight lines with hook, curved)"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-number-show",
+                "name": "Tuplet number show/hide"
+              },
+              {
+                "type": "item",
+                "id": "rhythm-tuplet-beamed-hide",
+                "name": "Auto-hide bracket when tuplet is fully beamed"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Proportional and spatial notation",
+        "items": [
+          {
+            "type": "item",
+            "id": "rhythm-proportional-spacing",
+            "name": "Proportional notation (horizontal spacing proportional to duration)"
+          },
+          {
+            "type": "item",
+            "id": "rhythm-spatial-graphic",
+            "name": "Spatial/graphic notation (time expressed by horizontal position)"
+          },
+          {
+            "type": "item",
+            "id": "rhythm-time-ruler",
+            "name": "Time ruler or timeline (seconds/milliseconds axis)"
+          },
+          {
+            "type": "item",
+            "id": "rhythm-unmeasured",
+            "name": "Unmeasured / free rhythm (no barlines, no fixed meter)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "name": "Rests",
+    "items": [
+      {
+        "type": "subgroup",
+        "name": "Rest durations",
+        "items": [
+          {
+            "type": "item",
+            "id": "rest-maxima",
+            "name": "Maxima rest (8 whole notes)"
+          },
+          {
+            "type": "item",
+            "id": "rest-longa",
+            "name": "Longa rest (4 whole notes)"
+          },
+          {
+            "type": "item",
+            "id": "rest-breve",
+            "name": "Breve (double whole) rest"
+          },
+          {
+            "type": "item",
+            "id": "rest-whole",
+            "name": "Whole rest"
+          },
+          {
+            "type": "item",
+            "id": "rest-half",
+            "name": "Half rest"
+          },
+          {
+            "type": "item",
+            "id": "rest-quarter",
+            "name": "Quarter rest"
+          },
+          {
+            "type": "item",
+            "id": "rest-eighth",
+            "name": "Eighth rest"
+          },
+          {
+            "type": "item",
+            "id": "rest-sixteenth",
+            "name": "16th rest"
+          },
+          {
+            "type": "item",
+            "id": "rest-32nd",
+            "name": "32nd rest"
+          },
+          {
+            "type": "item",
+            "id": "rest-64th",
+            "name": "64th rest"
+          },
+          {
+            "type": "item",
+            "id": "rest-128th",
+            "name": "128th rest"
+          },
+          {
+            "type": "item",
+            "id": "rest-256th",
+            "name": "256th rest"
+          },
+          {
+            "type": "item",
+            "id": "rest-512th",
+            "name": "512th rest"
+          },
+          {
+            "type": "item",
+            "id": "rest-2048th",
+            "name": "2048th rest"
+          },
+          {
+            "type": "item",
+            "id": "rest-4096th",
+            "name": "4096th rest"
+          },
+          {
+            "type": "item",
+            "id": "rest-dotted",
+            "name": "Dotted rest (single dot)"
+          },
+          {
+            "type": "item",
+            "id": "rest-double-dotted",
+            "name": "Dotted rest (2 dots)"
+          },
+          {
+            "type": "item",
+            "id": "rest-triple-dotted",
+            "name": "Dotted rest (3 dots)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Whole and multi-measure rests",
+        "items": [
+          {
+            "type": "item",
+            "id": "rest-whole-as-full-measure",
+            "name": "Whole rest used as full-measure rest (regardless of time signature)"
+          },
+          {
+            "type": "item",
+            "id": "rest-multi-measure",
+            "name": "Multi-measure rest (H-bar with number)"
+          },
+          {
+            "type": "item",
+            "id": "rest-multi-measure-count",
+            "name": "Multi-measure rest bar count"
+          },
+          {
+            "type": "item",
+            "id": "rest-multi-measure-old-style",
+            "name": "Old-style longa/breve rests for multi-measure rests"
+          },
+          {
+            "type": "item",
+            "id": "rest-multi-measure-width",
+            "name": "Width of multi-measure rest H-bar"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Rest in tuplets",
+        "items": [
+          {
+            "type": "item",
+            "id": "rest-tuplet",
+            "name": "Rest within a tuplet"
+          },
+          {
+            "type": "item",
+            "id": "rest-tuplet-full",
+            "name": "Tuplet consisting entirely of rests"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Rest placement",
+        "items": [
+          {
+            "type": "item",
+            "id": "rest-staff-position-override",
+            "name": "Staff position override (rest moved to specific line/space)"
+          },
+          {
+            "type": "item",
+            "id": "rest-voice-offset",
+            "name": "Rest offset for multiple voices (voice 1 up, voice 2 down)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Rest visibility and display",
+        "items": [
+          {
+            "type": "item",
+            "id": "rest-hidden",
+            "name": "Hidden rest (occupies time but not displayed)"
+          },
+          {
+            "type": "item",
+            "id": "rest-cue-size",
+            "name": "Cue-size rest"
+          },
+          {
+            "type": "item",
+            "id": "rest-color",
+            "name": "Rest color override"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "name": "Measures",
+    "items": [
+      {
+        "type": "subgroup",
+        "name": "Clefs",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "G clefs",
+            "items": [
+              {
+                "type": "item",
+                "id": "clef-type-g2",
+                "name": "G2 (treble clef)"
+              },
+              {
+                "type": "item",
+                "id": "clef-type-g1",
+                "name": "G1 (French violin clef)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "F clefs",
+            "items": [
+              {
+                "type": "item",
+                "id": "clef-type-f4",
+                "name": "F4 (bass clef)"
+              },
+              {
+                "type": "item",
+                "id": "clef-type-f3",
+                "name": "F3 (baritone F clef)"
+              },
+              {
+                "type": "item",
+                "id": "clef-type-f5",
+                "name": "F5 (sub-bass clef)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "C clefs",
+            "items": [
+              {
+                "type": "item",
+                "id": "clef-type-c1",
+                "name": "C1 (soprano clef)"
+              },
+              {
+                "type": "item",
+                "id": "clef-type-c2",
+                "name": "C2 (mezzo-soprano clef)"
+              },
+              {
+                "type": "item",
+                "id": "clef-type-c3",
+                "name": "C3 (alto clef)"
+              },
+              {
+                "type": "item",
+                "id": "clef-type-c4",
+                "name": "C4 (tenor clef)"
+              },
+              {
+                "type": "item",
+                "id": "clef-type-c5",
+                "name": "C5 (baritone C clef)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Octave-transposing clefs",
+            "items": [
+              {
+                "type": "item",
+                "id": "clef-type-g2-8vb",
+                "name": "G2 ottava bassa (tenor vocal clef)"
+              },
+              {
+                "type": "item",
+                "id": "clef-type-g2-8va",
+                "name": "G2 ottava alta"
+              },
+              {
+                "type": "item",
+                "id": "clef-type-g2-15mb",
+                "name": "G2 quindicesima bassa"
+              },
+              {
+                "type": "item",
+                "id": "clef-type-g2-15ma",
+                "name": "G2 quindicesima alta"
+              },
+              {
+                "type": "item",
+                "id": "clef-type-f4-8vb",
+                "name": "F4 ottava bassa (contrabass, etc.)"
+              },
+              {
+                "type": "item",
+                "id": "clef-type-f4-8va",
+                "name": "F4 ottava alta"
+              },
+              {
+                "type": "item",
+                "id": "clef-type-c-octave",
+                "name": "C clef with octave transposition"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Special clefs",
+            "items": [
+              {
+                "type": "item",
+                "id": "clef-type-percussion",
+                "name": "Percussion clef (two vertical bars)"
+              },
+              {
+                "type": "item",
+                "id": "clef-type-percussion-single",
+                "name": "Single-line percussion clef"
+              },
+              {
+                "type": "item",
+                "id": "clef-type-tab",
+                "name": "Tablature clef (TAB)"
+              },
+              {
+                "type": "item",
+                "id": "clef-type-none",
+                "name": "No clef / invisible clef"
+              },
+              {
+                "type": "item",
+                "id": "clef-type-arbitrary",
+                "name": "Arbitrary clef sign on arbitrary staff line"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Clef positions",
+            "items": [
+              {
+                "type": "item",
+                "id": "clef-position-initial",
+                "name": "Initial clef (start of piece / start of each system)"
+              },
+              {
+                "type": "item",
+                "id": "clef-position-bar-start",
+                "name": "Clef change at start of bar"
+              },
+              {
+                "type": "item",
+                "id": "clef-position-inner",
+                "name": "Mid-bar clef change (at specific rhythmic position)"
+              },
+              {
+                "type": "item",
+                "id": "clef-position-courtesy",
+                "name": "Courtesy clef at end of system (warning before break)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Key signatures",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "Standard key signatures",
+            "items": [
+              {
+                "type": "item",
+                "id": "keysig-major-sharp",
+                "name": "Major sharp keys (G, D, A, E, B, F♯, C♯)"
+              },
+              {
+                "type": "item",
+                "id": "keysig-major-flat",
+                "name": "Major flat keys (F, B♭, E♭, A♭, D♭, G♭, C♭)"
+              },
+              {
+                "type": "item",
+                "id": "keysig-minor",
+                "name": "Minor keys (mode distinction from relative major)"
+              },
+              {
+                "type": "item",
+                "id": "keysig-cmajor-aminor",
+                "name": "No sharps or flats (C major / A minor)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Non-standard key signatures",
+            "items": [
+              {
+                "type": "item",
+                "id": "keysig-custom",
+                "name": "Custom key signature (arbitrary accidentals on arbitrary pitches)"
+              },
+              {
+                "type": "item",
+                "id": "keysig-mixed",
+                "name": "Mixed key signature (sharps and flats together)"
+              },
+              {
+                "type": "item",
+                "id": "keysig-microtonal",
+                "name": "Microtonal key signature (quarter-tone or other accidentals)"
+              },
+              {
+                "type": "item",
+                "id": "keysig-modal",
+                "name": "Modal key signatures (e.g., D Dorian with no accidentals vs. B♭)"
+              },
+              {
+                "type": "item",
+                "id": "keysig-non-western",
+                "name": "Non-Western key signatures (Turkish, Arabic maqam, etc.)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Key signature encoding",
+            "items": [
+              {
+                "type": "item",
+                "id": "keysig-fifths",
+                "name": "Key encoded as number of fifths (e.g., -1 = F major)"
+              },
+              {
+                "type": "item",
+                "id": "keysig-explicit-accidentals",
+                "name": "Key encoded as explicit list of pitch/accidental pairs"
+              },
+              {
+                "type": "item",
+                "id": "keysig-mode",
+                "name": "Mode attribute (major, minor, dorian, mixolydian, etc.)"
+              },
+              {
+                "type": "item",
+                "id": "keysig-tonic",
+                "name": "Tonic pitch (root of the key)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Key signature changes",
+            "items": [
+              {
+                "type": "item",
+                "id": "keysig-change-at-barline",
+                "name": "Key signature change at barline"
+              },
+              {
+                "type": "item",
+                "id": "keysig-change-mid-measure",
+                "name": "Mid-measure key signature change"
+              },
+              {
+                "type": "item",
+                "id": "keysig-change-cancellation",
+                "name": "Cancellation naturals (naturals shown before new key signature)"
+              },
+              {
+                "type": "item",
+                "id": "keysig-change-to-open",
+                "name": "Change to open/atonal (cancellation naturals only, no new key)"
+              },
+              {
+                "type": "item",
+                "id": "keysig-change-courtesy",
+                "name": "Courtesy key signature at end of system (warning before break)"
+              },
+              {
+                "type": "item",
+                "id": "keysig-change-courtesy-cancellation",
+                "name": "Courtesy cancellation naturals at end of system"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Transposing instrument key signatures",
+            "items": [
+              {
+                "type": "item",
+                "id": "keysig-transposed",
+                "name": "Transposed key signature (written key for transposing instrument)"
+              },
+              {
+                "type": "item",
+                "id": "keysig-atonal-transposing",
+                "name": "Atonal transposing instrument (no key signature, but transposition applies)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Key signature display",
+            "items": [
+              {
+                "type": "item",
+                "id": "keysig-display-hidden",
+                "name": "Hidden / suppressed key signature"
+              },
+              {
+                "type": "item",
+                "id": "keysig-display-parenthesized",
+                "name": "Parenthesized key signature (editorial or cautionary)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Time signatures",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "Simple time signatures",
+            "items": [
+              {
+                "type": "item",
+                "id": "timesig-simple-common",
+                "name": "Common time (4/4)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-simple-cut",
+                "name": "Cut time / alla breve (2/2)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-simple-numeric",
+                "name": "Numeric time signature (numerator / denominator)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-simple-single-number",
+                "name": "Single-number time signature (e.g., 3 alone, common in early music)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Compound and complex time signatures",
+            "items": [
+              {
+                "type": "item",
+                "id": "timesig-compound",
+                "name": "Compound meter (e.g., 6/8, 9/8, 12/8)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-additive",
+                "name": "Additive / composite numerator (e.g., 3+2/8, 2+3+2/8)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-fractional",
+                "name": "Fractional time signature (e.g., 2.5/4)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-irrational",
+                "name": "Irrational time signature (non-power-of-2 denominator, e.g., 4/3)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-open",
+                "name": "Open / free time (no time signature, unmeasured)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Alternating and interchangeable time signatures",
+            "items": [
+              {
+                "type": "item",
+                "id": "timesig-alternating",
+                "name": "Alternating meters (e.g., 3/4 + 4/4 shown together, bars alternate)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-interchangeable",
+                "name": "Interchangeable meters (e.g., 2/4 ≈ 6/8, bars may use either)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-dual-stacked",
+                "name": "Dual time signatures stacked (e.g., 6/8 over 3/4)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Multiple simultaneous time signatures",
+            "items": [
+              {
+                "type": "item",
+                "id": "timesig-polymeter",
+                "name": "Different time signatures on different staves simultaneously"
+              },
+              {
+                "type": "item",
+                "id": "timesig-polymeter-barline",
+                "name": "Barline alignment in polymetric passages"
+              },
+              {
+                "type": "item",
+                "id": "timesig-polymeter-local",
+                "name": "Local time signature (applies to one staff only, not full score)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Time signature changes",
+            "items": [
+              {
+                "type": "item",
+                "id": "timesig-change-barline",
+                "name": "Time signature change at barline"
+              },
+              {
+                "type": "item",
+                "id": "timesig-change-mid-measure",
+                "name": "Mid-measure time signature change"
+              },
+              {
+                "type": "item",
+                "id": "timesig-change-courtesy",
+                "name": "Courtesy time signature at end of system (warning before break)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-change-cancellation",
+                "name": "Time signature cancellation (revert to no time signature)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Mensural time signatures",
+            "items": [
+              {
+                "type": "item",
+                "id": "timesig-mensural-tempus-perfectum",
+                "name": "Tempus perfectum (circle, ○)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-mensural-tempus-imperfectum",
+                "name": "Tempus imperfectum (half circle, ℂ)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-mensural-prolatio",
+                "name": "Prolation dot (dot inside circle/half-circle)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-mensural-proportio",
+                "name": "Proportio signs (numeric ratios for proportional tempo changes)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-mensural-cut",
+                "name": "Cut signatures (vertical line through circle/half-circle)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Time signature display",
+            "items": [
+              {
+                "type": "item",
+                "id": "timesig-display-symbol",
+                "name": "Symbol style: C and cut-C vs. numeric 4/4 and 2/2"
+              },
+              {
+                "type": "item",
+                "id": "timesig-display-large",
+                "name": "Large time signature spanning multiple staves"
+              },
+              {
+                "type": "item",
+                "id": "timesig-display-hidden",
+                "name": "Hidden / suppressed time signature"
+              },
+              {
+                "type": "item",
+                "id": "timesig-display-parenthesized",
+                "name": "Parenthesized time signature (editorial or cautionary)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-display-abbreviated",
+                "name": "Abbreviated time signature (numerator only for changes)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-display-note-value",
+                "name": "Time signature with graphical note denominator (e.g., 3/♪ instead of 3/8)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-display-font-size",
+                "name": "Time signature font/size override"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Metric relationship indications",
+            "items": [
+              {
+                "type": "item",
+                "id": "timesig-metric-modulation",
+                "name": "Metric modulation (note = note equivalence, e.g., ♪ = ♩)"
+              },
+              {
+                "type": "item",
+                "id": "timesig-metric-dotted",
+                "name": "Metric modulation with dotted note values"
+              },
+              {
+                "type": "item",
+                "id": "timesig-metric-tempo-equation",
+                "name": "Tempo equation across time signature change"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Barlines",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "Barline types",
+            "items": [
+              {
+                "type": "item",
+                "id": "barline-regular",
+                "name": "Regular (single thin)"
+              },
+              {
+                "type": "item",
+                "id": "barline-double",
+                "name": "Double (two thin lines)"
+              },
+              {
+                "type": "item",
+                "id": "barline-final",
+                "name": "Final (thin-thick)"
+              },
+              {
+                "type": "item",
+                "id": "barline-dashed",
+                "name": "Dashed"
+              },
+              {
+                "type": "item",
+                "id": "barline-dotted",
+                "name": "Dotted"
+              },
+              {
+                "type": "item",
+                "id": "barline-heavy",
+                "name": "Heavy (single thick)"
+              },
+              {
+                "type": "item",
+                "id": "barline-heavy-heavy",
+                "name": "Heavy-heavy (two thick lines)"
+              },
+              {
+                "type": "item",
+                "id": "barline-heavy-light",
+                "name": "Heavy-light (thick-thin, reverse final)"
+              },
+              {
+                "type": "item",
+                "id": "barline-short",
+                "name": "Short (partial staff height)"
+              },
+              {
+                "type": "item",
+                "id": "barline-tick",
+                "name": "Tick (short line at top of staff)"
+              },
+              {
+                "type": "item",
+                "id": "barline-none",
+                "name": "No barline (invisible / suppressed)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Barline spanning and grouping",
+            "items": [
+              {
+                "type": "item",
+                "id": "barline-span-full-system",
+                "name": "Barline spanning entire system (all staves)"
+              },
+              {
+                "type": "item",
+                "id": "barline-span-staff-group",
+                "name": "Barline spanning a staff group (e.g., all strings)"
+              },
+              {
+                "type": "item",
+                "id": "barline-span-partial",
+                "name": "Barline spanning a subset of staves"
+              },
+              {
+                "type": "item",
+                "id": "barline-span-between-staves",
+                "name": "Barline only between staves, not through (Mensurstrich)"
+              },
+              {
+                "type": "item",
+                "id": "barline-span-single-staff",
+                "name": "Barline on a single staff only"
+              },
+              {
+                "type": "item",
+                "id": "barline-span-grand-staff",
+                "name": "Barline connecting grand staff (e.g., piano, organ)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Barline display",
+            "items": [
+              {
+                "type": "item",
+                "id": "barline-display-hidden",
+                "name": "Hidden barline (barline exists semantically but not drawn)"
+              },
+              {
+                "type": "item",
+                "id": "barline-display-color",
+                "name": "Barline color"
+              },
+              {
+                "type": "item",
+                "id": "barline-display-thickness",
+                "name": "Barline thickness override"
+              },
+              {
+                "type": "item",
+                "id": "barline-display-gap",
+                "name": "Gap between barline components (e.g., space in double barline)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "name": "Voices and layers",
+    "items": [
+      {
+        "type": "subgroup",
+        "name": "Voice encoding",
+        "items": [
+          {
+            "type": "item",
+            "id": "voice-count",
+            "name": "Multiple voices on a single staff (voice 1, 2, 3, 4+)"
+          },
+          {
+            "type": "item",
+            "id": "voice-id",
+            "name": "Voice identifier (numeric, named, or arbitrary ID)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Multi-voice collision avoidance",
+        "items": [
+          {
+            "type": "item",
+            "id": "voice-shared-notehead",
+            "name": "Strategy for unison noteheads with same duration (single notehead with two stems vs. separate adjacent noteheads)"
+          },
+          {
+            "type": "item",
+            "id": "voice-shared-notehead-diff-duration",
+            "name": "Strategy for unison noteheads with different durations"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Voice display",
+        "items": [
+          {
+            "type": "item",
+            "id": "voice-color",
+            "name": "Voice color coding (editorial / display aid)"
+          },
+          {
+            "type": "item",
+            "id": "voice-hide",
+            "name": "Voice hiding (muting a voice from display)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "name": "Structure",
+    "items": [
+      {
+        "type": "subgroup",
+        "name": "Staff lines",
+        "items": [
+          {
+            "type": "item",
+            "id": "struct-lines-5",
+            "name": "Five-line staff"
+          },
+          {
+            "type": "item",
+            "id": "struct-lines-1",
+            "name": "Single-line staff"
+          },
+          {
+            "type": "item",
+            "id": "struct-lines-2",
+            "name": "Two-line staff"
+          },
+          {
+            "type": "item",
+            "id": "struct-lines-arbitrary",
+            "name": "Arbitrary number of staff lines, with definition of how to intrepret"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Repeat structures",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "Simple repeats",
+            "items": [
+              {
+                "type": "item",
+                "id": "struct-repeat-forward",
+                "name": "Forward repeat (start repeat)"
+              },
+              {
+                "type": "item",
+                "id": "struct-repeat-backward",
+                "name": "Backward repeat (end repeat)"
+              },
+              {
+                "type": "item",
+                "id": "struct-repeat-forward-backward",
+                "name": "End-start repeat (back-to-back, combined)"
+              },
+              {
+                "type": "item",
+                "id": "struct-repeat-dot-count",
+                "name": "Number of visual repeat dots (2 is standard; 4 seen in older editions)"
+              },
+              {
+                "type": "item",
+                "id": "struct-repeat-winged",
+                "name": "Winged repeats (wings extending above/below staff)"
+              },
+              {
+                "type": "item",
+                "id": "struct-repeat-count",
+                "name": "Repeat count / play count (e.g., 3x)"
+              },
+              {
+                "type": "item",
+                "id": "struct-repeat-nested",
+                "name": "Nested repeats (repeat within a repeat)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Volta brackets (endings)",
+            "items": [
+              {
+                "type": "item",
+                "id": "struct-volta-first",
+                "name": "First ending (1.)"
+              },
+              {
+                "type": "item",
+                "id": "struct-volta-second",
+                "name": "Second ending (2.)"
+              },
+              {
+                "type": "item",
+                "id": "struct-volta-multiple",
+                "name": "Three or more endings"
+              },
+              {
+                "type": "item",
+                "id": "struct-volta-combined",
+                "name": "Combined endings (e.g., \"1. 3.\" or \"1.-3.\")"
+              },
+              {
+                "type": "item",
+                "id": "struct-volta-open-ended",
+                "name": "Open-ended volta (no closing barline, e.g., final ending)"
+              },
+              {
+                "type": "item",
+                "id": "struct-volta-text",
+                "name": "Custom volta text (e.g., \"last time\", \"with repeat\")"
+              },
+              {
+                "type": "item",
+                "id": "struct-volta-cross-system",
+                "name": "Volta bracket continuation across system break"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Simile marks (pattern repeats)",
+            "items": [
+              {
+                "type": "item",
+                "id": "struct-simile-single-beat",
+                "name": "Single-beat repeat (slash on beat, repeats previous beat)"
+              },
+              {
+                "type": "item",
+                "id": "struct-simile-two-beat",
+                "name": "Two-beat repeat (slash with dot, repeats previous two beats)"
+              },
+              {
+                "type": "item",
+                "id": "struct-simile-single-bar",
+                "name": "Single-bar repeat (% sign, repeats previous measure)"
+              },
+              {
+                "type": "item",
+                "id": "struct-simile-two-bar",
+                "name": "Two-bar repeat (repeats previous two measures)"
+              },
+              {
+                "type": "item",
+                "id": "struct-simile-four-bar",
+                "name": "Four-bar repeat"
+              },
+              {
+                "type": "item",
+                "id": "struct-simile-count",
+                "name": "Repeat count above simile marks (e.g., \"4\" above % signs)"
+              },
+              {
+                "type": "item",
+                "id": "struct-simile-across-system",
+                "name": "Multi-bar simile split across system break"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Jumps and navigation",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "Segno and coda signs",
+            "items": [
+              {
+                "type": "item",
+                "id": "struct-segno",
+                "name": "Segno sign"
+              },
+              {
+                "type": "item",
+                "id": "struct-coda",
+                "name": "Coda sign"
+              },
+              {
+                "type": "item",
+                "id": "struct-segno-multiple",
+                "name": "Multiple segno signs (segno 1, segno 2)"
+              },
+              {
+                "type": "item",
+                "id": "struct-coda-multiple",
+                "name": "Multiple coda signs (coda 1, coda 2)"
+              },
+              {
+                "type": "item",
+                "id": "struct-segno-placement",
+                "name": "Segno/coda placement (above staff, at barline, etc.)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Da Capo (D.C.) instructions",
+            "items": [
+              {
+                "type": "item",
+                "id": "struct-dc",
+                "name": "Da Capo"
+              },
+              {
+                "type": "item",
+                "id": "struct-dc-al-fine",
+                "name": "D.C. al Fine"
+              },
+              {
+                "type": "item",
+                "id": "struct-dc-al-coda",
+                "name": "D.C. al Coda"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Dal Segno (D.S.) instructions",
+            "items": [
+              {
+                "type": "item",
+                "id": "struct-ds",
+                "name": "Dal Segno"
+              },
+              {
+                "type": "item",
+                "id": "struct-ds-al-fine",
+                "name": "D.S. al Fine"
+              },
+              {
+                "type": "item",
+                "id": "struct-ds-al-coda",
+                "name": "D.S. al Coda"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Jump details",
+            "items": [
+              {
+                "type": "item",
+                "id": "struct-fine",
+                "name": "Fine marking (end point after D.C. or D.S.)"
+              },
+              {
+                "type": "item",
+                "id": "struct-to-coda",
+                "name": "To Coda / \"al Coda\" jump point"
+              },
+              {
+                "type": "item",
+                "id": "struct-jump-with-repeat",
+                "name": "D.C. / D.S. with repeats (con ripetizione)"
+              },
+              {
+                "type": "item",
+                "id": "struct-jump-without-repeat",
+                "name": "D.C. / D.S. without repeats (senza ripetizione)"
+              },
+              {
+                "type": "item",
+                "id": "struct-custom-jump-text",
+                "name": "Custom jump instruction text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Rehearsal marks and sections",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "Rehearsal marks",
+            "items": [
+              {
+                "type": "item",
+                "id": "struct-rehearsal-letter",
+                "name": "Rehearsal letter (A, B, C)"
+              },
+              {
+                "type": "item",
+                "id": "struct-rehearsal-number",
+                "name": "Rehearsal number (1, 2, 3)"
+              },
+              {
+                "type": "item",
+                "id": "struct-rehearsal-measure-number",
+                "name": "Measure number as rehearsal mark"
+              },
+              {
+                "type": "item",
+                "id": "struct-rehearsal-custom-text",
+                "name": "Custom text rehearsal mark (e.g., \"Intro\", \"Verse\")"
+              },
+              {
+                "type": "item",
+                "id": "struct-rehearsal-double-letter",
+                "name": "Double-letter rehearsal marks (AA, BB, etc., after Z)"
+              },
+              {
+                "type": "item",
+                "id": "struct-rehearsal-enclosure",
+                "name": "Enclosure shape (box, circle, none)"
+              },
+              {
+                "type": "item",
+                "id": "struct-rehearsal-font",
+                "name": "Rehearsal mark font, size, and style"
+              },
+              {
+                "type": "item",
+                "id": "struct-rehearsal-auto-number",
+                "name": "Automatic sequential numbering/lettering"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Section labels",
+            "items": [
+              {
+                "type": "item",
+                "id": "struct-section-name",
+                "name": "Section name (Intro, Verse, Chorus, Bridge, Coda, etc.)"
+              },
+              {
+                "type": "item",
+                "id": "struct-section-boundary",
+                "name": "Section boundary (semantic start/end of a named section)"
+              },
+              {
+                "type": "item",
+                "id": "struct-movement",
+                "name": "Movement or act designation within a single score"
+              },
+              {
+                "type": "item",
+                "id": "struct-movement-break",
+                "name": "Movement break (new movement starts on same page vs. new page)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Measure numbers",
+        "items": [
+          {
+            "type": "item",
+            "id": "struct-measure-number",
+            "name": "Measure number"
+          },
+          {
+            "type": "item",
+            "id": "struct-measure-number-display",
+            "name": "Measure number display frequency (every bar, every N bars, at system start)"
+          },
+          {
+            "type": "item",
+            "id": "struct-measure-number-override",
+            "name": "Measure number override (custom number at specific point)"
+          },
+          {
+            "type": "item",
+            "id": "struct-measure-number-offset",
+            "name": "Measure number offset (e.g., pickup bar = 0 or unnumbered)"
+          },
+          {
+            "type": "item",
+            "id": "struct-measure-number-enclosure",
+            "name": "Measure number enclosure (box, circle, none)"
+          },
+          {
+            "type": "item",
+            "id": "struct-measure-number-font",
+            "name": "Measure number font, size, and style"
+          },
+          {
+            "type": "item",
+            "id": "struct-measure-number-sub",
+            "name": "Sub-measure numbers (e.g., 12a, 12b for inserted bars)"
+          },
+          {
+            "type": "item",
+            "id": "struct-measure-number-placement",
+            "name": "Measure number placement (above staff, below, at barline)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "System and page layout",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "System breaks",
+            "items": [
+              {
+                "type": "item",
+                "id": "struct-system-break",
+                "name": "Forced system break"
+              },
+              {
+                "type": "item",
+                "id": "struct-system-break-inhibit",
+                "name": "Inhibited system break (prevent break at this barline)"
+              },
+              {
+                "type": "item",
+                "id": "struct-system-measures",
+                "name": "Number of measures per system"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Page breaks",
+            "items": [
+              {
+                "type": "item",
+                "id": "struct-page-break",
+                "name": "Forced page break"
+              },
+              {
+                "type": "item",
+                "id": "struct-page-break-inhibit",
+                "name": "Inhibited page break"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Page layout",
+            "items": [
+              {
+                "type": "item",
+                "id": "struct-page-size",
+                "name": "Page size (A4, Letter, custom dimensions)"
+              },
+              {
+                "type": "item",
+                "id": "struct-page-margins",
+                "name": "Page margins"
+              },
+              {
+                "type": "item",
+                "id": "struct-page-orientation",
+                "name": "Page orientation (portrait vs. landscape)"
+              },
+              {
+                "type": "item",
+                "id": "struct-page-number",
+                "name": "Page numbers"
+              },
+              {
+                "type": "item",
+                "id": "struct-page-header-footer",
+                "name": "Headers and footers (title, composer, page number, copyright)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "System layout",
+            "items": [
+              {
+                "type": "item",
+                "id": "struct-system-distance",
+                "name": "Distance between systems"
+              },
+              {
+                "type": "item",
+                "id": "struct-staff-distance",
+                "name": "Distance between staves within a system"
+              },
+              {
+                "type": "item",
+                "id": "struct-system-indent-first",
+                "name": "First system indentation (for instrument names)"
+              },
+              {
+                "type": "item",
+                "id": "struct-system-indent-subsequent",
+                "name": "Subsequent system indentation"
+              },
+              {
+                "type": "item",
+                "id": "struct-system-bracket",
+                "name": "System bracket (brace, bracket, none)"
+              },
+              {
+                "type": "item",
+                "id": "struct-system-barline-grouping",
+                "name": "System barline grouping (which staves barlines connect)"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Separation of content and layout",
+            "items": [
+              {
+                "type": "item",
+                "id": "struct-separation",
+                "name": "Ability to encode multiple (alternative) layouts for the same underlying music"
+              },
+              {
+                "type": "item",
+                "id": "struct-separation-source-parts",
+                "name": "Ability to choose explicit parts to include in a system"
+              },
+              {
+                "type": "item",
+                "id": "struct-separation-source-voices",
+                "name": "Ability to choose explicit voices to include in a system"
+              },
+              {
+                "type": "item",
+                "id": "struct-separation-source-staff",
+                "name": "Ability to choose explicit staffs (from multi-staff instruments) to include in a system"
+              },
+              {
+                "type": "item",
+                "id": "struct-separation-source-stemdir",
+                "name": "Ability to set stem direction for notes in a given system+source"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Staff visibility and ossia",
+        "items": [
+          {
+            "type": "item",
+            "id": "struct-staff-hide-empty",
+            "name": "Hide empty staves"
+          },
+          {
+            "type": "item",
+            "id": "struct-staff-hide-empty-first",
+            "name": "Show all staves on first system even if empty"
+          },
+          {
+            "type": "item",
+            "id": "struct-staff-hide-specific",
+            "name": "Hide specific staff in specific systems"
+          },
+          {
+            "type": "item",
+            "id": "struct-staff-ossia",
+            "name": "Ossia staff (small alternative passage above/below)"
+          },
+          {
+            "type": "item",
+            "id": "struct-staff-ossia-scope",
+            "name": "Ossia staff scope (spans specific measures only)"
+          },
+          {
+            "type": "item",
+            "id": "struct-staff-cue",
+            "name": "Cue staff (small staff showing another instrument's part)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Tempo markings",
+        "items": [
+          {
+            "type": "subgroup",
+            "name": "Absolute tempo",
+            "items": [
+              {
+                "type": "item",
+                "id": "struct-tempo-bpm",
+                "name": "Metronome mark (♩ = 120)"
+              },
+              {
+                "type": "item",
+                "id": "struct-tempo-bpm-range",
+                "name": "Tempo range (♩ = 112-120)"
+              },
+              {
+                "type": "item",
+                "id": "struct-tempo-bpm-dotted",
+                "name": "Metronome mark with dotted note value (♩. = 80)"
+              },
+              {
+                "type": "item",
+                "id": "struct-tempo-text",
+                "name": "Tempo text (Allegro, Andante, Presto, etc.)"
+              },
+              {
+                "type": "item",
+                "id": "struct-tempo-text-with-bpm",
+                "name": "Combined tempo text and metronome mark (Allegro ♩ = 132)"
+              },
+              {
+                "type": "item",
+                "id": "struct-tempo-custom-text",
+                "name": "Custom/free-form tempo text"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Tempo changes",
+            "items": [
+              {
+                "type": "item",
+                "id": "struct-tempo-rit",
+                "name": "Ritardando (rit.)"
+              },
+              {
+                "type": "item",
+                "id": "struct-tempo-rall",
+                "name": "Rallentando (rall.)"
+              },
+              {
+                "type": "item",
+                "id": "struct-tempo-accel",
+                "name": "Accelerando (accel.)"
+              },
+              {
+                "type": "item",
+                "id": "struct-tempo-a-tempo",
+                "name": "A tempo (return to previous tempo)"
+              },
+              {
+                "type": "item",
+                "id": "struct-tempo-tempo-primo",
+                "name": "Tempo primo (return to opening tempo)"
+              },
+              {
+                "type": "item",
+                "id": "struct-tempo-poco-a-poco",
+                "name": "Gradual tempo text (poco a poco rit., etc.)"
+              },
+              {
+                "type": "item",
+                "id": "struct-tempo-change-line",
+                "name": "Dashed continuation line for gradual tempo changes"
+              },
+              {
+                "type": "item",
+                "id": "struct-tempo-subito",
+                "name": "Sudden tempo change"
+              }
+            ]
+          },
+          {
+            "type": "subgroup",
+            "name": "Tempo display",
+            "items": [
+              {
+                "type": "item",
+                "id": "struct-tempo-placement",
+                "name": "Tempo mark placement (above staff, above system)"
+              },
+              {
+                "type": "item",
+                "id": "struct-tempo-font",
+                "name": "Tempo text font, size, and style"
+              },
+              {
+                "type": "item",
+                "id": "struct-tempo-hidden",
+                "name": "Hidden tempo mark (affects playback only)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Swing and rhythmic feel",
+        "items": [
+          {
+            "type": "item",
+            "id": "struct-swing-triplet-feel",
+            "name": "Triplet feel / swing indication"
+          },
+          {
+            "type": "item",
+            "id": "struct-swing-straight-feel",
+            "name": "Straight feel (return to even eighths after swing)"
+          },
+          {
+            "type": "item",
+            "id": "struct-swing-dotted-feel",
+            "name": "Dotted feel indication"
+          },
+          {
+            "type": "item",
+            "id": "struct-swing-ratio",
+            "name": "Swing ratio (numeric, e.g., 2:1, 3:1, or percentage)"
+          },
+          {
+            "type": "item",
+            "id": "struct-swing-sixteenth",
+            "name": "Sixteenth-note swing (shuffle feel on sixteenths instead of eighths)"
+          },
+          {
+            "type": "item",
+            "id": "struct-swing-text",
+            "name": "Swing text indications (\"Swing\", \"Shuffle\", \"Straight 8ths\", \"Freely\")"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Text and expressions",
+        "items": [
+          {
+            "type": "item",
+            "id": "struct-text-expression",
+            "name": "Expression text (dolce, espressivo, cantabile, etc.)"
+          },
+          {
+            "type": "item",
+            "id": "struct-text-technique",
+            "name": "Technique text (pizz., arco, mute, etc.)"
+          },
+          {
+            "type": "item",
+            "id": "struct-text-staff-attached",
+            "name": "Staff-attached text (moves with the music)"
+          },
+          {
+            "type": "item",
+            "id": "struct-text-system-attached",
+            "name": "System-attached text (appears on all parts)"
+          },
+          {
+            "type": "item",
+            "id": "struct-text-free",
+            "name": "Free-form text at arbitrary position"
+          },
+          {
+            "type": "item",
+            "id": "struct-text-frame",
+            "name": "Text frame / text block (title page, program notes)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "name": "Instruments",
+    "items": [
+      {
+        "type": "subgroup",
+        "name": "Instruments",
+        "items": [
+          {
+            "type": "item",
+            "id": "instrument-name",
+            "name": "Instrument name (full name, e.g., \"Violin I\")"
+          },
+          {
+            "type": "item",
+            "id": "instrument-abbrev",
+            "name": "Abbreviated instrument name (e.g., \"Vln. I\")"
+          },
+          {
+            "type": "item",
+            "id": "instrument-name-display",
+            "name": "Instrument name display preference (e.g., first system full, subsequent abbreviated)"
+          },
+          {
+            "type": "item",
+            "id": "instrument-change",
+            "name": "Instrument change mid-flow (e.g., Flute → Piccolo)"
+          },
+          {
+            "type": "item",
+            "id": "instrument-transposition",
+            "name": "Instrument transposition definition"
+          },
+          {
+            "type": "item",
+            "id": "instrument-midi-program",
+            "name": "MIDI program / sound assignment"
+          },
+          {
+            "type": "item",
+            "id": "instrument-midi-channel",
+            "name": "MIDI channel"
+          },
+          {
+            "type": "item",
+            "id": "instrument-staff-count",
+            "name": "Number of staves per instrument (1, 2 for piano, 3 for organ)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "name": "Metadata",
+    "items": [
+      {
+        "type": "subgroup",
+        "name": "Metadata",
+        "items": [
+          {
+            "type": "item",
+            "id": "meta-title",
+            "name": "Title"
+          },
+          {
+            "type": "item",
+            "id": "meta-subtitle",
+            "name": "Subtitle"
+          },
+          {
+            "type": "item",
+            "id": "meta-composer",
+            "name": "Composer"
+          },
+          {
+            "type": "item",
+            "id": "meta-arranger",
+            "name": "Arranger"
+          },
+          {
+            "type": "item",
+            "id": "meta-lyricist",
+            "name": "Lyricist"
+          },
+          {
+            "type": "item",
+            "id": "meta-copyright",
+            "name": "Copyright notice"
+          },
+          {
+            "type": "item",
+            "id": "meta-opus",
+            "name": "Opus / catalog number"
+          },
+          {
+            "type": "item",
+            "id": "meta-dedication",
+            "name": "Dedication"
+          },
+          {
+            "type": "item",
+            "id": "meta-date",
+            "name": "Date of composition"
+          },
+          {
+            "type": "item",
+            "id": "meta-encoding-date",
+            "name": "Encoding / creation date"
+          },
+          {
+            "type": "item",
+            "id": "meta-software",
+            "name": "Software / encoder identification"
+          },
+          {
+            "type": "item",
+            "id": "meta-custom",
+            "name": "Custom metadata fields"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "name": "Lyrics",
+    "items": [
+      {
+        "type": "subgroup",
+        "name": "Lyric encoding",
+        "items": [
+          {
+            "type": "item",
+            "id": "lyric-text",
+            "name": "Lyric syllable text"
+          },
+          {
+            "type": "item",
+            "id": "lyric-word-part",
+            "name": "Syllabic type (single, begin, middle, end)"
+          },
+          {
+            "type": "item",
+            "id": "lyric-verse-number",
+            "name": "Verse / line number"
+          },
+          {
+            "type": "item",
+            "id": "lyric-multiple-verses",
+            "name": "Multiple verses stacked vertically"
+          },
+          {
+            "type": "item",
+            "id": "lyric-name",
+            "name": "Lyric line name or label (e.g., \"Verse 1\", \"Chorus\")"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Syllable-to-note alignment",
+        "items": [
+          {
+            "type": "item",
+            "id": "lyric-single-syllable",
+            "name": "Single syllable on single note"
+          },
+          {
+            "type": "item",
+            "id": "lyric-melisma",
+            "name": "Melisma (one syllable sustained across multiple notes)"
+          },
+          {
+            "type": "item",
+            "id": "lyric-elision",
+            "name": "Elision / synalepha (two syllables merged on one note, ‿)"
+          },
+          {
+            "type": "item",
+            "id": "lyric-on-rest",
+            "name": "Lyric attached to rest (spoken text, recitative)"
+          },
+          {
+            "type": "item",
+            "id": "lyric-on-chord",
+            "name": "Lyric on chord (single syllable for multi-note event)"
+          },
+          {
+            "type": "item",
+            "id": "lyric-multi-syllable-per-note",
+            "name": "Multiple syllables on one note (parlando, rapid text)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Hyphens",
+        "items": [
+          {
+            "type": "item",
+            "id": "lyric-hyphen",
+            "name": "Hyphen between syllables of a word"
+          },
+          {
+            "type": "item",
+            "id": "lyric-hyphen-multiple",
+            "name": "Multiple hyphens for wide note spacing"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Extender lines",
+        "items": [
+          {
+            "type": "item",
+            "id": "lyric-extender",
+            "name": "Melisma extender line (underscore through held syllable)"
+          },
+          {
+            "type": "item",
+            "id": "lyric-extender-endpoint",
+            "name": "Extender line endpoint (ends at last note of melisma)"
+          },
+          {
+            "type": "item",
+            "id": "lyric-extender-system-break",
+            "name": "Extender line continuation across system break"
+          },
+          {
+            "type": "item",
+            "id": "lyric-word-extension",
+            "name": "Word extension line (after final syllable held through notes)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Verse and section structure",
+        "items": [
+          {
+            "type": "item",
+            "id": "lyric-verse-label",
+            "name": "Verse label displayed before first syllable (\"1.\", \"V2\", etc.)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Lyric placement and display",
+        "items": [
+          {
+            "type": "item",
+            "id": "lyric-placement-below",
+            "name": "Lyrics below staff (default)"
+          },
+          {
+            "type": "item",
+            "id": "lyric-placement-above",
+            "name": "Lyrics above staff"
+          },
+          {
+            "type": "item",
+            "id": "lyric-placement-between",
+            "name": "Lyrics between staves"
+          },
+          {
+            "type": "item",
+            "id": "lyric-line-spacing",
+            "name": "Vertical spacing between verse lines"
+          },
+          {
+            "type": "item",
+            "id": "lyric-alignment",
+            "name": "Syllable alignment to note (left-aligned, centered)"
+          },
+          {
+            "type": "item",
+            "id": "lyric-font-style",
+            "name": "Font / style per lyric line (e.g., italic for translations)"
+          },
+          {
+            "type": "item",
+            "id": "lyric-syllable-formatting",
+            "name": "Per-syllable formatting (bold, italic, size, color)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Language and special text",
+        "items": [
+          {
+            "type": "item",
+            "id": "lyric-language",
+            "name": "Language attribute on lyric line"
+          },
+          {
+            "type": "item",
+            "id": "lyric-rtl",
+            "name": "Right-to-left lyric text (Arabic, Hebrew)"
+          },
+          {
+            "type": "item",
+            "id": "lyric-ipa",
+            "name": "IPA (International Phonetic Alphabet) transcription line"
+          },
+          {
+            "type": "item",
+            "id": "lyric-spoken",
+            "name": "Spoken text / stage direction within lyric lines"
+          },
+          {
+            "type": "item",
+            "id": "lyric-humming",
+            "name": "Humming / vocalization without text"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "name": "Chord symbols",
+    "items": [
+      {
+        "type": "subgroup",
+        "name": "Chord root",
+        "items": [
+          {
+            "type": "item",
+            "id": "chord-root-letter",
+            "name": "Root pitch letter (A-G)"
+          },
+          {
+            "type": "item",
+            "id": "chord-root-accidental",
+            "name": "Root accidental (♯, ♭)"
+          },
+          {
+            "type": "item",
+            "id": "chord-root-enharmonic",
+            "name": "Enharmonic root spelling (D♭ vs. C♯)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Chord quality",
+        "items": [
+          {
+            "type": "item",
+            "id": "chord-quality-major",
+            "name": "Major"
+          },
+          {
+            "type": "item",
+            "id": "chord-quality-minor",
+            "name": "Minor"
+          },
+          {
+            "type": "item",
+            "id": "chord-quality-diminished",
+            "name": "Diminished"
+          },
+          {
+            "type": "item",
+            "id": "chord-quality-augmented",
+            "name": "Augmented"
+          },
+          {
+            "type": "item",
+            "id": "chord-quality-suspended-2",
+            "name": "Suspended 2nd (sus2)"
+          },
+          {
+            "type": "item",
+            "id": "chord-quality-suspended-4",
+            "name": "Suspended 4th (sus4)"
+          },
+          {
+            "type": "item",
+            "id": "chord-quality-power",
+            "name": "Power chord (5, root + fifth only)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Extensions",
+        "items": [
+          {
+            "type": "item",
+            "id": "chord-ext-7",
+            "name": "Dominant 7th (7)"
+          },
+          {
+            "type": "item",
+            "id": "chord-ext-maj7",
+            "name": "Major 7th (maj7, Δ, M7)"
+          },
+          {
+            "type": "item",
+            "id": "chord-ext-min7",
+            "name": "Minor 7th (m7, -7)"
+          },
+          {
+            "type": "item",
+            "id": "chord-ext-dim7",
+            "name": "Diminished 7th (°7)"
+          },
+          {
+            "type": "item",
+            "id": "chord-ext-half-dim",
+            "name": "Half-diminished 7th (ø, m7♭5)"
+          },
+          {
+            "type": "item",
+            "id": "chord-ext-min-maj7",
+            "name": "Minor-major 7th (m(maj7))"
+          },
+          {
+            "type": "item",
+            "id": "chord-ext-aug7",
+            "name": "Augmented 7th (+7, 7♯5)"
+          },
+          {
+            "type": "item",
+            "id": "chord-ext-6",
+            "name": "Added 6th (6)"
+          },
+          {
+            "type": "item",
+            "id": "chord-ext-min6",
+            "name": "Minor 6th (m6)"
+          },
+          {
+            "type": "item",
+            "id": "chord-ext-9",
+            "name": "9th (dominant, major, minor)"
+          },
+          {
+            "type": "item",
+            "id": "chord-ext-11",
+            "name": "11th (dominant, major, minor)"
+          },
+          {
+            "type": "item",
+            "id": "chord-ext-13",
+            "name": "13th (dominant, major, minor)"
+          },
+          {
+            "type": "item",
+            "id": "chord-ext-add",
+            "name": "Added tone (add9, add11, add13 - no implied lower extensions)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Alterations",
+        "items": [
+          {
+            "type": "item",
+            "id": "chord-alter-sharp5",
+            "name": "♯5 (augmented 5th)"
+          },
+          {
+            "type": "item",
+            "id": "chord-alter-flat5",
+            "name": "♭5 (diminished 5th)"
+          },
+          {
+            "type": "item",
+            "id": "chord-alter-sharp9",
+            "name": "♯9"
+          },
+          {
+            "type": "item",
+            "id": "chord-alter-flat9",
+            "name": "♭9"
+          },
+          {
+            "type": "item",
+            "id": "chord-alter-sharp11",
+            "name": "♯11"
+          },
+          {
+            "type": "item",
+            "id": "chord-alter-flat13",
+            "name": "♭13"
+          },
+          {
+            "type": "item",
+            "id": "chord-alter-multiple",
+            "name": "Multiple simultaneous alterations (e.g., 7♯9♭13)"
+          },
+          {
+            "type": "item",
+            "id": "chord-alter-no",
+            "name": "Omitted tones (no3, no5)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Bass note and inversions",
+        "items": [
+          {
+            "type": "item",
+            "id": "chord-bass-slash",
+            "name": "Slash chord / bass note (e.g., C/E, Am/G)"
+          },
+          {
+            "type": "item",
+            "id": "chord-bass-non-chord-tone",
+            "name": "Non-chord-tone bass (e.g., C/F, bass note not in the chord)"
+          },
+          {
+            "type": "item",
+            "id": "chord-bass-accidental",
+            "name": "Accidental on bass note"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Special chord symbols",
+        "items": [
+          {
+            "type": "item",
+            "id": "chord-nc",
+            "name": "No chord (N.C.)"
+          },
+          {
+            "type": "item",
+            "id": "chord-polychord",
+            "name": "Polychord (e.g., C over D♭, stacked chord symbols)"
+          },
+          {
+            "type": "item",
+            "id": "chord-pedal",
+            "name": "Pedal bass indication (repeated bass note across chord changes)"
+          },
+          {
+            "type": "item",
+            "id": "chord-repeat",
+            "name": "Chord repeat slash (rhythm slashes indicating previous chord continues)"
+          },
+          {
+            "type": "item",
+            "id": "chord-parenthesized",
+            "name": "Parenthesized chord (optional or passing chord)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Chord symbol encoding",
+        "items": [
+          {
+            "type": "item",
+            "id": "chord-encode-semantic",
+            "name": "Semantic encoding (root, quality, extensions as structured data)"
+          },
+          {
+            "type": "item",
+            "id": "chord-encode-text",
+            "name": "Text-only encoding (chord as plain string)"
+          },
+          {
+            "type": "item",
+            "id": "chord-encode-intervals",
+            "name": "Interval-based encoding (list of pitch classes / semitone offsets)"
+          },
+          {
+            "type": "item",
+            "id": "chord-encode-duration",
+            "name": "Chord duration / rhythmic position"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Chord symbol display",
+        "items": [
+          {
+            "type": "item",
+            "id": "chord-display-style",
+            "name": "Symbol style system (jazz, pop, classical, Nashville)"
+          },
+          {
+            "type": "item",
+            "id": "chord-display-minor-style",
+            "name": "Minor chord rendering (m, min, mi, -)"
+          },
+          {
+            "type": "item",
+            "id": "chord-display-maj7-style",
+            "name": "Major 7th rendering (maj7, Δ, M7, ma7)"
+          },
+          {
+            "type": "item",
+            "id": "chord-display-dim-style",
+            "name": "Diminished rendering (dim, °, °7)"
+          },
+          {
+            "type": "item",
+            "id": "chord-display-halfdim-style",
+            "name": "Half-diminished rendering (ø, m7♭5)"
+          },
+          {
+            "type": "item",
+            "id": "chord-display-aug-style",
+            "name": "Augmented rendering (+, aug)"
+          },
+          {
+            "type": "item",
+            "id": "chord-display-superscript",
+            "name": "Superscript layout for extensions and alterations"
+          },
+          {
+            "type": "item",
+            "id": "chord-display-stacking",
+            "name": "Vertical stacking of alterations (e.g., ♯9 above ♭13)"
+          },
+          {
+            "type": "item",
+            "id": "chord-display-font",
+            "name": "Chord symbol font, size, and style"
+          },
+          {
+            "type": "item",
+            "id": "chord-display-placement",
+            "name": "Placement (above staff, between staves)"
+          },
+          {
+            "type": "item",
+            "id": "chord-display-alignment",
+            "name": "Horizontal alignment to beat / note"
+          },
+          {
+            "type": "item",
+            "id": "chord-display-region",
+            "name": "Region markers (chord region with rhythm slashes)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Chord diagrams (fretboard grids)",
+        "items": [
+          {
+            "type": "item",
+            "id": "chord-diagram-basic",
+            "name": "Chord diagram (fretboard grid)"
+          },
+          {
+            "type": "item",
+            "id": "chord-diagram-fingering",
+            "name": "Fingering dots on fretboard"
+          },
+          {
+            "type": "item",
+            "id": "chord-diagram-barre",
+            "name": "Barré indication"
+          },
+          {
+            "type": "item",
+            "id": "chord-diagram-open-muted",
+            "name": "Open (O) and muted (X) string indicators"
+          },
+          {
+            "type": "item",
+            "id": "chord-diagram-fret-offset",
+            "name": "Starting fret number (for chords above first position)"
+          },
+          {
+            "type": "item",
+            "id": "chord-diagram-name",
+            "name": "Chord name above diagram"
+          },
+          {
+            "type": "item",
+            "id": "chord-diagram-string-count",
+            "name": "Diagram string count (4, 5, 6, 7+)"
+          },
+          {
+            "type": "item",
+            "id": "chord-diagram-custom",
+            "name": "Custom / user-defined chord diagrams"
+          },
+          {
+            "type": "item",
+            "id": "chord-diagram-inline",
+            "name": "Inline diagram above staff (aligned to chord symbol position)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Nashville number system",
+        "items": [
+          {
+            "type": "item",
+            "id": "chord-nashville-number",
+            "name": "Scale degree number (1-7)"
+          },
+          {
+            "type": "item",
+            "id": "chord-nashville-quality",
+            "name": "Quality modifiers (minor as -, diminished as °)"
+          },
+          {
+            "type": "item",
+            "id": "chord-nashville-accidental",
+            "name": "Chromatic alteration of scale degree (♭7, ♯4)"
+          },
+          {
+            "type": "item",
+            "id": "chord-nashville-bass",
+            "name": "Bass note as scale degree (e.g., 1/3)"
+          },
+          {
+            "type": "item",
+            "id": "chord-nashville-diamond",
+            "name": "Diamond notation (whole note, hold chord for full bar)"
+          },
+          {
+            "type": "item",
+            "id": "chord-nashville-pushes",
+            "name": "Push/anticipation notation (^ symbol)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Roman numeral analysis",
+        "items": [
+          {
+            "type": "item",
+            "id": "chord-roman-numeral",
+            "name": "Roman numeral (I-VII, uppercase major / lowercase minor)"
+          },
+          {
+            "type": "item",
+            "id": "chord-roman-inversion",
+            "name": "Inversion figures (6, 6/4, 6/5, 4/3, 4/2)"
+          },
+          {
+            "type": "item",
+            "id": "chord-roman-secondary",
+            "name": "Secondary dominants and functions (V/V, viio/ii)"
+          },
+          {
+            "type": "item",
+            "id": "chord-roman-applied",
+            "name": "Applied/borrowed chords (♭VI, ♭VII from parallel minor)"
+          },
+          {
+            "type": "item",
+            "id": "chord-roman-neapolitan",
+            "name": "Neapolitan (N, ♭II)"
+          },
+          {
+            "type": "item",
+            "id": "chord-roman-augmented-sixth",
+            "name": "Augmented sixth chords (It+6, Fr+6, Ger+6)"
+          },
+          {
+            "type": "item",
+            "id": "chord-roman-key-label",
+            "name": "Key/tonicization label (e.g., \"G:\" or \"in G\")"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Figured bass",
+        "items": [
+          {
+            "type": "item",
+            "id": "chord-figbass-figures",
+            "name": "Bass figures (numbers indicating intervals above bass)"
+          },
+          {
+            "type": "item",
+            "id": "chord-figbass-accidentals",
+            "name": "Accidentals on figures (♯, ♭, ♮ before/after number)"
+          },
+          {
+            "type": "item",
+            "id": "chord-figbass-slash",
+            "name": "Slashed figure (slash through number indicating raised tone)"
+          },
+          {
+            "type": "item",
+            "id": "chord-figbass-stacking",
+            "name": "Vertical figure stacking order"
+          },
+          {
+            "type": "item",
+            "id": "chord-figbass-continuation",
+            "name": "Continuation line (dash indicating held figure)"
+          },
+          {
+            "type": "item",
+            "id": "chord-figbass-parenthesized",
+            "name": "Parenthesized figures (editorial)"
+          },
+          {
+            "type": "item",
+            "id": "chord-figbass-placement",
+            "name": "Figure placement (below bass note)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "name": "Tablature",
+    "items": [
+      {
+        "type": "subgroup",
+        "name": "Tablature staff",
+        "items": [
+          {
+            "type": "item",
+            "id": "tab-staff-6-string",
+            "name": "6-string tablature (standard guitar)"
+          },
+          {
+            "type": "item",
+            "id": "tab-staff-4-string",
+            "name": "4-string tablature (bass guitar, ukulele, etc.)"
+          },
+          {
+            "type": "item",
+            "id": "tab-staff-5-string",
+            "name": "5-string tablature (5-string bass, banjo)"
+          },
+          {
+            "type": "item",
+            "id": "tab-staff-7-plus-string",
+            "name": "7+ string tablature (extended range guitars)"
+          },
+          {
+            "type": "item",
+            "id": "tab-staff-arbitrary-lines",
+            "name": "Arbitrary number of strings"
+          },
+          {
+            "type": "item",
+            "id": "tab-staff-line-order",
+            "name": "Line order (highest pitch at top vs. bottom)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Tuning",
+        "items": [
+          {
+            "type": "item",
+            "id": "tab-tuning-standard",
+            "name": "Standard tuning definition (E A D G B E, etc.)"
+          },
+          {
+            "type": "item",
+            "id": "tab-tuning-alternate",
+            "name": "Alternate tuning (drop D, open G, DADGAD, etc.)"
+          },
+          {
+            "type": "item",
+            "id": "tab-tuning-capo",
+            "name": "Capo position"
+          },
+          {
+            "type": "item",
+            "id": "tab-tuning-display",
+            "name": "Tuning displayed at start of tablature"
+          },
+          {
+            "type": "item",
+            "id": "tab-tuning-per-string",
+            "name": "Per-string tuning specification"
+          },
+          {
+            "type": "item",
+            "id": "tab-tuning-changes",
+            "name": "Tuning changes in the middle of a piece"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Fret numbers",
+        "items": [
+          {
+            "type": "item",
+            "id": "tab-fret-number",
+            "name": "Fret number on string (basic tablature note)"
+          },
+          {
+            "type": "item",
+            "id": "tab-fret-zero",
+            "name": "Open string (fret 0)"
+          },
+          {
+            "type": "item",
+            "id": "tab-fret-high",
+            "name": "High fret numbers (double digits, 10+)"
+          },
+          {
+            "type": "item",
+            "id": "tab-fret-x",
+            "name": "Muted / dead string (X)"
+          },
+          {
+            "type": "item",
+            "id": "tab-fret-chord",
+            "name": "Multiple simultaneous fret numbers (chord)"
+          },
+          {
+            "type": "item",
+            "id": "tab-fret-ghost",
+            "name": "Ghost note (fret number in parentheses)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Rhythm in tablature",
+        "items": [
+          {
+            "type": "item",
+            "id": "tab-rhythm-stems",
+            "name": "Rhythmic stems on tablature notes"
+          },
+          {
+            "type": "item",
+            "id": "tab-rhythm-beams",
+            "name": "Beamed tablature notes"
+          },
+          {
+            "type": "item",
+            "id": "tab-rhythm-flags",
+            "name": "Flags on unbeamed tablature notes"
+          },
+          {
+            "type": "item",
+            "id": "tab-rhythm-dots",
+            "name": "Augmentation dots on tablature notes"
+          },
+          {
+            "type": "item",
+            "id": "tab-rhythm-no-rhythm",
+            "name": "Rhythm-less tablature (fret numbers only, no stems)"
+          },
+          {
+            "type": "item",
+            "id": "tab-rhythm-shared-notation",
+            "name": "Rhythm shown on paired standard notation staff only"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Tablature with standard notation",
+        "items": [
+          {
+            "type": "item",
+            "id": "tab-paired-staff",
+            "name": "Paired tablature + standard notation staves"
+          },
+          {
+            "type": "item",
+            "id": "tab-standalone",
+            "name": "Tablature as standalone staff (no paired notation)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Left-hand techniques",
+        "items": [
+          {
+            "type": "item",
+            "id": "tab-hammer-on",
+            "name": "Hammer-on (slur / H)"
+          },
+          {
+            "type": "item",
+            "id": "tab-pull-off",
+            "name": "Pull-off (slur / P)"
+          },
+          {
+            "type": "item",
+            "id": "tab-slide-up",
+            "name": "Slide up (/ or S)"
+          },
+          {
+            "type": "item",
+            "id": "tab-slide-down",
+            "name": "Slide down (\\ or S)"
+          },
+          {
+            "type": "item",
+            "id": "tab-slide-shift",
+            "name": "Shift slide (legato slide from one fret to another)"
+          },
+          {
+            "type": "item",
+            "id": "tab-slide-in",
+            "name": "Slide in from above/below (approach slide, no origin fret)"
+          },
+          {
+            "type": "item",
+            "id": "tab-slide-out",
+            "name": "Slide out to above/below (exit slide, no target fret)"
+          },
+          {
+            "type": "item",
+            "id": "tab-vibrato",
+            "name": "Vibrato (wavy line)"
+          },
+          {
+            "type": "item",
+            "id": "tab-wide-vibrato",
+            "name": "Wide / exaggerated vibrato"
+          },
+          {
+            "type": "item",
+            "id": "tab-trill",
+            "name": "Trill (with target fret)"
+          },
+          {
+            "type": "item",
+            "id": "tab-lh-fingering",
+            "name": "Left-hand fingering (1-4)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Right-hand techniques",
+        "items": [
+          {
+            "type": "item",
+            "id": "tab-pick-down",
+            "name": "Downstroke / down-pick"
+          },
+          {
+            "type": "item",
+            "id": "tab-pick-up",
+            "name": "Upstroke / up-pick"
+          },
+          {
+            "type": "item",
+            "id": "tab-rh-fingering",
+            "name": "Right-hand fingering (p, i, m, a, c)"
+          },
+          {
+            "type": "item",
+            "id": "tab-tap",
+            "name": "Right-hand tap (T)"
+          },
+          {
+            "type": "item",
+            "id": "tab-slap",
+            "name": "Slap (bass guitar, S)"
+          },
+          {
+            "type": "item",
+            "id": "tab-pop",
+            "name": "Pop (bass guitar, P)"
+          },
+          {
+            "type": "item",
+            "id": "tab-rasgueado",
+            "name": "Rasgueado"
+          },
+          {
+            "type": "item",
+            "id": "tab-strum-arrow",
+            "name": "Strum direction arrow"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Bends",
+        "items": [
+          {
+            "type": "item",
+            "id": "tab-bend-full",
+            "name": "Full bend (one whole step)"
+          },
+          {
+            "type": "item",
+            "id": "tab-bend-half",
+            "name": "Half bend (one half step)"
+          },
+          {
+            "type": "item",
+            "id": "tab-bend-quarter",
+            "name": "Quarter-tone bend"
+          },
+          {
+            "type": "item",
+            "id": "tab-bend-one-and-half",
+            "name": "Bend of 1.5 steps or more"
+          },
+          {
+            "type": "item",
+            "id": "tab-bend-release",
+            "name": "Bend and release"
+          },
+          {
+            "type": "item",
+            "id": "tab-bend-release-rebend",
+            "name": "Bend, release, and re-bend"
+          },
+          {
+            "type": "item",
+            "id": "tab-pre-bend",
+            "name": "Pre-bend (bend before picking)"
+          },
+          {
+            "type": "item",
+            "id": "tab-pre-bend-release",
+            "name": "Pre-bend and release"
+          },
+          {
+            "type": "item",
+            "id": "tab-unison-bend",
+            "name": "Unison bend (bend one string to match pitch of another)"
+          },
+          {
+            "type": "item",
+            "id": "tab-bend-arrow",
+            "name": "Bend arrow notation (arrow with interval text)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Harmonics in tablature",
+        "items": [
+          {
+            "type": "item",
+            "id": "tab-harmonic-natural",
+            "name": "Natural harmonic"
+          },
+          {
+            "type": "item",
+            "id": "tab-harmonic-artificial",
+            "name": "Artificial harmonic"
+          },
+          {
+            "type": "item",
+            "id": "tab-harmonic-pinch",
+            "name": "Pinch harmonic"
+          },
+          {
+            "type": "item",
+            "id": "tab-harmonic-tap",
+            "name": "Tap harmonic"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Other tablature notations",
+        "items": [
+          {
+            "type": "item",
+            "id": "tab-palm-mute",
+            "name": "Palm mute (P.M. with dashed line)"
+          },
+          {
+            "type": "item",
+            "id": "tab-let-ring",
+            "name": "Let ring (dashed line or tied notes)"
+          },
+          {
+            "type": "item",
+            "id": "tab-arpeggio",
+            "name": "Arpeggiated chord (wavy line)"
+          },
+          {
+            "type": "item",
+            "id": "tab-tremolo-picking",
+            "name": "Tremolo picking (slashes on stem)"
+          },
+          {
+            "type": "item",
+            "id": "tab-whammy-bar",
+            "name": "Whammy bar / tremolo bar dive and return"
+          },
+          {
+            "type": "item",
+            "id": "tab-whammy-bar-dip",
+            "name": "Whammy bar dip (quick dive and return)"
+          },
+          {
+            "type": "item",
+            "id": "tab-pick-scrape",
+            "name": "Pick scrape / pick slide"
+          },
+          {
+            "type": "item",
+            "id": "tab-muted-strum",
+            "name": "Muted strum (all strings X)"
+          }
+        ]
+      },
+      {
+        "type": "subgroup",
+        "name": "Tablature display",
+        "items": [
+          {
+            "type": "item",
+            "id": "tab-display-fret-font",
+            "name": "Fret number font and size"
+          },
+          {
+            "type": "item",
+            "id": "tab-display-staff-line-spacing",
+            "name": "Tablature staff line spacing"
+          },
+          {
+            "type": "item",
+            "id": "tab-display-stem-position",
+            "name": "Stem position (above staff, through staff, or below)"
+          },
+          {
+            "type": "item",
+            "id": "tab-display-note-spacing",
+            "name": "Note spacing (proportional vs. fixed)"
+          }
+        ]
+      }
+    ]
+  }
+]
