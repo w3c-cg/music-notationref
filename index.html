@@ -171,7 +171,7 @@ class SupportTable {
             i = 0,
             len = this.formats.length;
         for (; i !== len; i++) {
-            html += `<label><input type="checkbox" id="formatchk${i}" data-idx="${i}"> ${makeSafe(this.formats[i]['name'])}</label> `;
+            html += `<label><input type="checkbox" id="formatchk${i}" data-idx="${i}"` + (this.selectedFormats.has(i) ? ' checked' : '') + `> ${makeSafe(this.formats[i]['name'])}</label> `;
         }
         this.formatsEl.innerHTML = html;
     }
