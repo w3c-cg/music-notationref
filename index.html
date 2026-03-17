@@ -8,7 +8,7 @@
 body { display: flex; min-height: 100vh; }
 #sidebar { position: fixed; width: 200px; height: 100vh; flex-shrink: 0; padding: 20px; background: #cedede; overflow-y: auto; }
 #content { margin: 0 0 0 200px; flex: 1; padding: 20px; }
-#content-header { position: fixed; top: 0; left: 200px; right: 0; height: 40px; background: #ccc; padding: 10px; font-size: 14px; }
+#content-header { position: fixed; top: 0; left: 200px; right: 0; height: 40px; background: #ccc; padding: 10px; font-size: 14px; display: flex; }
 h1 { font-size: 15px; margin: 0 0 20px; }
 #tagline { font-size: 13px; margin: 0 0 20px; }
 #sidebarnav { list-style: none; }
@@ -17,7 +17,8 @@ h1 { font-size: 15px; margin: 0 0 20px; }
 #sidebarnav button { background: none; border: 0; cursor: pointer; text-align: left; }
 
 td { border-bottom: 1px solid #ccc; padding: 5px; }
-#formatinfo { user-select: none; }
+#formatinfo { user-select: none; flex: 1; }
+#importjson { padding: 1px; font-size: 12px; cursor: pointer; }
 h2 { font-size: 20px; margin: 40px 0 0; }
 tr.hidden { display: none; }
 tr.expandable { background: #ddd; cursor: pointer; user-select: none; }
@@ -40,6 +41,7 @@ td.support3 { background: #ffb6c1; }
 <div id="content">
     <div id="content-header">
         <div id="formatinfo"></div>
+        <button id="importjson">Import JSON</button>
     </div>
     <div id="maintable"></div>
 </div>
@@ -107,6 +109,9 @@ class SupportTable {
             if (rowEl) {
                 this.toggleExpand(rowEl);
             }
+        });
+        gid('importjson').addEventListener('click', () => {
+            this.promptForFormatJson();
         });
 
         Promise.all([
@@ -278,6 +283,17 @@ class SupportTable {
             el = el.nextSibling;
         }
         addRemoveClass(rowEl, 'expanded', !expanded);
+    }
+    promptForFormatJson() {
+        var url = window.prompt('Enter the URL of a format JSON file to add to the table:');
+        if (url) {
+            this.fetchFormat(url).then(() => {
+                this.redrawFormatSelector();
+                this.redrawContent();
+                this.selectFormat(this.formats.length - 1, true);
+            });
+
+        }
     }
     expandAll() {
         var rows = this.tableEl.querySelectorAll('tr'),
