@@ -40,7 +40,6 @@ td.support3 { background: #ffb6c1; }
 <div id="content">
     <div id="content-header">
         <div id="formatinfo"></div>
-        <div style="display:none">Reset table: <button id="expandall">Expand all</button> <button id="collapseall">Collapse all</button></div>
     </div>
     <div id="maintable"></div>
 </div>
@@ -108,12 +107,6 @@ class SupportTable {
             if (rowEl) {
                 this.toggleExpand(rowEl);
             }
-        });
-        gid('expandall').addEventListener('click', () => {
-            this.expandAll();
-        });
-        gid('collapseall').addEventListener('click', () => {
-            this.collapseAll();
         });
 
         Promise.all([
