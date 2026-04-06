@@ -813,6 +813,16 @@
                 "type": "item",
                 "id": "event-fermata-rest",
                 "name": "Fermata over rest"
+              },
+              {
+                "type": "item",
+                "id": "event-fermata-fullbar-rest",
+                "name": "Fermata over full-measure rest"
+              },
+              {
+                "type": "item",
+                "id": "event-fermata-text",
+                "name": "Text attached to fermata (e.g., duration indication)"
               }
             ]
           },

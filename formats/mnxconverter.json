@@ -135,6 +135,8 @@
     "event-fermata-orientation": {"level": 3, "text": "Not implemented yet", "link": ""},
     "event-fermata-barline": {"level": 3, "text": "Not implemented yet", "link": ""},
     "event-fermata-rest": {"level": 3, "text": "Not implemented yet", "link": ""},
+    "event-fermata-fullbar-rest": {"level": 3, "text": "Not implemented yet"},
+    "event-fermata-text": {"level": 3, "text": "Not implemented yet"},
     "event-breath": {"level": 1, "text": "Implemented", "link": ""},
     "event-breath-symbol": {"level": 3, "text": "Not implemented yet", "link": ""},
     "event-caesura": {"level": 3, "text": "Not implemented yet", "link": ""},
