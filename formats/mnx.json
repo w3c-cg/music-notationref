@@ -135,6 +135,8 @@
     "event-fermata-orientation": {"level": 3, "text": "Not implemented yet; planned for 1.0"},
     "event-fermata-barline": {"level": 3, "text": "Not implemented yet; planned for 1.0"},
     "event-fermata-rest": {"level": 3, "text": "Not implemented yet; planned for 1.0"},
+    "event-fermata-fullbar-rest": {"level": 3, "text": "Not implemented yet; planned for 1.0"},
+    "event-fermata-text": {"level": 3, "text": "Not implemented yet"},
     "event-breath": {"level": 1, "text": "Event markings 'breath' key", "link": "https://w3c.github.io/mnx/docs/mnx-reference/objects/breath-mark/"},
     "event-breath-symbol": {"level": 1, "text": "Breath mark 'symbol' key", "link": "https://w3c.github.io/mnx/docs/mnx-reference/objects/breath-mark/"},
     "event-caesura": {"level": 3, "text": "Not implemented yet; planned for 1.0"},
