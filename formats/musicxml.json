@@ -135,6 +135,8 @@
     "event-fermata-orientation": {"level": 1, "text": "<fermata> type attribute (upright/inverted)", "link": "https://w3c.github.io/musicxml/musicxml-reference/elements/fermata/"},
     "event-fermata-barline": {"level": 1, "text": "<fermata> as child of <barline>", "link": "https://w3c.github.io/musicxml/musicxml-reference/elements/fermata/"},
     "event-fermata-rest": {"level": 1, "text": "<fermata> within <notations> on a rest note", "link": "https://w3c.github.io/musicxml/musicxml-reference/elements/fermata/"},
+    "event-fermata-fullbar-rest": {"level": 1, "text": "<fermata> within <notations> on a rest note", "link": "https://w3c.github.io/musicxml/musicxml-reference/elements/fermata/"},
+    "event-fermata-text": {"level": 3, "text": "Not implemented"},
     "event-breath": {"level": 1, "text": "<breath-mark>", "link": "https://w3c.github.io/musicxml/musicxml-reference/elements/breath-mark/"},
     "event-breath-symbol": {"level": 1, "text": "<breath-mark> value (comma, tick, upbow, salzedo)", "link": "https://w3c.github.io/musicxml/musicxml-reference/elements/breath-mark/"},
     "event-caesura": {"level": 1, "text": "<caesura>", "link": "https://w3c.github.io/musicxml/musicxml-reference/elements/caesura/"},
