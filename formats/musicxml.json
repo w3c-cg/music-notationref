@@ -225,6 +225,7 @@
     "event-arpeggio-up": {"level": 1, "text": "<arpeggiate> with direction=\"up\"", "link": "https://w3c-cg.github.io/musicxml/musicxml-reference/elements/arpeggiate/"},
     "event-arpeggio-down": {"level": 1, "text": "<arpeggiate> with direction=\"down\"", "link": "https://w3c-cg.github.io/musicxml/musicxml-reference/elements/arpeggiate/"},
     "event-arpeggio-cross-staff": {"level": 1, "text": "<arpeggiate> number attribute links arpeggio across notes on different staves", "link": "https://w3c-cg.github.io/musicxml/musicxml-reference/elements/arpeggiate/"},
+    "event-non-arpeggio": {"level": 1, "text": "<non-arpeggiate>", "link": "https://w3c-cg.github.io/musicxml/musicxml-reference/elements/non-arpeggiate/"},
     "event-bow-down": {"level": 1, "text": "<down-bow>", "link": "https://w3c-cg.github.io/musicxml/musicxml-reference/elements/down-bow/"},
     "event-bow-up": {"level": 1, "text": "<up-bow>", "link": "https://w3c-cg.github.io/musicxml/musicxml-reference/elements/up-bow/"},
     "event-string-open": {"level": 1, "text": "<open-string>", "link": "https://w3c-cg.github.io/musicxml/musicxml-reference/elements/open-string/"},
