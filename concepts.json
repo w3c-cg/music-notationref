@@ -1335,6 +1335,11 @@
                 "type": "item",
                 "id": "event-arpeggio-cross-staff",
                 "name": "Arpeggio spanning staves (e.g., piano)"
+              },
+              {
+                "type": "item",
+                "id": "event-non-arpeggio",
+                "name": "Non-arpeggio mark (square bracket meaning notes shouldn't be arpeggiated)"
               }
             ]
           },

@@ -223,6 +223,7 @@
     "event-arpeggio-up": {"level": 3, "text": "Not implemented", "link": ""},
     "event-arpeggio-down": {"level": 3, "text": "Not implemented", "link": ""},
     "event-arpeggio-cross-staff": {"level": 3, "text": "Not implemented", "link": ""},
+    "event-non-arpeggio": {"level": 3, "text": "Not implemented yet", "link": ""},
     "event-bow-down": {"level": 3, "text": "Not implemented", "link": ""},
     "event-bow-up": {"level": 3, "text": "Not implemented", "link": ""},
     "event-string-open": {"level": 3, "text": "Not implemented", "link": ""},
