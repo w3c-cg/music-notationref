@@ -117,7 +117,9 @@ class SupportTable {
         Promise.all([
             this.fetchConcepts(),
             this.fetchFormat('./formats/mnx.json').then(() => {
-                return this.fetchFormat('./formats/mnxconverter.json');
+                return this.fetchFormat('./formats/mnxconverter.json').then(() => {
+                    return this.fetchFormat('./formats/musicxml.json');
+                });
             })
         ]).then(() => {
             this.redrawNav();
