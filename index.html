@@ -118,7 +118,7 @@ class SupportTable {
             this.fetchConcepts(),
             this.fetchFormat('https://w3c-cg.github.io/mnx/docs/notationref.json').then(() => {
                 return this.fetchFormat('./formats/mnxconverter.json').then(() => {
-                    return this.fetchFormat('./formats/musicxml.json');
+                    return this.fetchFormat('https://raw.githubusercontent.com/w3c-cg/musicxml/refs/heads/gh-pages/notationref.json');
                 });
             })
         ]).then(() => {
