@@ -116,7 +116,7 @@ class SupportTable {
 
         Promise.all([
             this.fetchConcepts(),
-            this.fetchFormat('./formats/mnx.json').then(() => {
+            this.fetchFormat('https://w3c-cg.github.io/mnx/docs/notationref.json').then(() => {
                 return this.fetchFormat('./formats/mnxconverter.json').then(() => {
                     return this.fetchFormat('./formats/musicxml.json');
                 });
