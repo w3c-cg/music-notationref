@@ -289,7 +289,7 @@ class SupportTable {
         addRemoveClass(rowEl, 'expanded', !expanded);
     }
     makeAbsoluteURL(baseUrl, link) {
-        return (baseUrl && link.startsWith('/')) ? baseUrl + link : link;
+        return baseUrl ? baseUrl + link : link;
     }
     promptForFormatJson() {
         var url = window.prompt('Enter the URL of a format JSON file to add to the table:');
