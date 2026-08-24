@@ -230,6 +230,7 @@ class SupportTable {
     }
     addFormat(format) {
         var support = format['support'],
+            baseUrl = format['baseUrl'],
             safeName = makeSafe(format['name']),
             rows = this.tableEl.querySelectorAll('tr'),
             formatID = this.formats.length,
@@ -258,7 +259,7 @@ class SupportTable {
                         cellValue = makeSafe(rowSupport['text']);
                     }
                     if (rowSupport['link']) {
-                        cellValue += ` (<a href="${makeSafe(rowSupport['link'])}">info</a>)`;
+                        cellValue += ` (<a href="${makeSafe(this.makeAbsoluteURL(baseUrl, rowSupport['link']))}">info</a>)`;
                     }
                     if (rowSupport['level']) {
                         supportLevel = rowSupport['level'];
@@ -286,6 +287,9 @@ class SupportTable {
             el = el.nextSibling;
         }
         addRemoveClass(rowEl, 'expanded', !expanded);
+    }
+    makeAbsoluteURL(baseUrl, link) {
+        return (baseUrl && link.startsWith('/')) ? baseUrl + link : link;
     }
     promptForFormatJson() {
         var url = window.prompt('Enter the URL of a format JSON file to add to the table:');
